@@ -1,0 +1,1786 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("kf-preload");
+      // skipped page transitions reject their promises; mark them handled (keeps the console clean)
+      ["pagereveal", "pageswap"].forEach(function (type) {
+        window.addEventListener(type, function (e) {
+          var vt = e.viewTransition;
+          if (vt)
+            ["ready", "finished", "updateCallbackDone"].forEach(function (k) {
+              if (vt[k]) vt[k].catch(function () {});
+            });
+        });
+      });
+    </script>
+    <title>Practical Information · Aubingo @Kambafarm</title>
+    <meta name="description" content="Directions, delivery zones, visitor safety, FAQ and policies for Kambafarm." />
+    <meta name="theme-color" content="#FBF8EF" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mukta:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
+    />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"
+    data-page="view-practical"
+  >
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="sticky top-0 z-40 w-full bg-surface border-b border-line" id="site-header">
+      <div
+        class="h-16 lg:h-20 max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between gap-gutter"
+      >
+        <!-- Logo: width/height reserve its space before the image arrives -->
+        <a
+          class="shrink-0 flex items-center transition-transform active:scale-[0.99]"
+          href="index.html"
+          aria-label="Aubingo @Kambafarm home"
+        >
+          <img
+            class="h-[42px] lg:h-[56px] w-auto object-contain"
+            src="assets/img/kambafarm-logo.webp"
+            alt="Kambafarm logo"
+            width="591"
+            height="200"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </a>
+
+        <!-- Desktop menu (1280px and wider) -->
+        <nav class="hidden xl:flex items-center gap-space-lg" aria-label="Main navigation">
+          <div class="relative group" data-nav-group="discover">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Discover<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-56 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-story.html"
+                  >Our story</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="the-farm.html"
+                  >The farm</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-team.html"
+                  >Our team</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-animals.html"
+                  >Our animals</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="how-we-farm.html"
+                  >How we farm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="shop">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Aubingo Shop<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-60 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=harvest"
+                  >This week's harvest</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=kitchen"
+                  >From our kitchen</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=seeds"
+                  >Seeds and saplings</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="special-enquiries.html"
+                  >Special enquiries</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="visit">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Visit Kambafarm<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-64 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="saturday-farm-tour.html"
+                  >Saturday farm tour</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="kambafarm-weekend.html"
+                  >Kambafarm Weekend</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="practical-information.html"
+                  >Practical information</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="news">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Kambafarm News<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-64 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="farm-stories.html"
+                  >Farm stories</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="product-knowledge-sheets.html"
+                  >Product knowledge sheets</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Language, basket, account, mobile menu button -->
+        <div class="shrink-0 flex items-center gap-space-sm md:gap-space-md">
+          <div class="relative group hidden sm:block" data-lang-switcher>
+            <button
+              class="h-11 min-w-[92px] px-space-md rounded-full border border-line bg-surface hover:bg-pale-leaf transition-colors flex items-center justify-center gap-space-xs font-label-sm text-label-sm text-primary-container"
+              type="button"
+              aria-haspopup="true"
+              aria-label="Choose language"
+            >
+              <span class="material-symbols-outlined text-small text-outline" aria-hidden="true">language</span
+              ><span data-lang-current>EN</span
+              ><span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute right-0 top-full pt-2 w-36 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-1 shadow-[0_4px_16px_rgba(0,0,0,0.06)] flex flex-col"
+                role="menu"
+                aria-label="Language"
+              >
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-label-sm text-label-sm text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="en"
+                >
+                  EN
+                </button>
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-deva-label text-deva-label text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="hi"
+                >
+                  हिं (Hindi)
+                </button>
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-deva-label text-deva-label text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="mr"
+                >
+                  मरा (Marathi)
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Basket: icon only, item count in a badge on the top-right -->
+          <a
+            class="relative w-11 h-11 rounded-full border-[1.5px] border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center shrink-0"
+            href="basket.html"
+            aria-label="Basket, 0 items"
+            data-basket-link
+          >
+            <span class="material-symbols-outlined text-[22px]" aria-hidden="true">shopping_basket</span>
+            <span
+              class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-[#7D202B] text-[#FBF8EF] text-[11px] leading-5 font-bold text-center tabular-nums ring-2 ring-surface pointer-events-none"
+              aria-hidden="true"
+              data-basket-count
+              >0</span
+            >
+          </a>
+          <a
+            class="hidden sm:inline-flex h-10 px-5 rounded-full bg-[#061C00] hover:bg-[#47710A] text-[#FBF8EF] items-center gap-1.5 font-label text-label whitespace-nowrap shrink-0 transition-colors"
+            href="login.html"
+            data-auth-out
+            ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">login</span>Login</a
+          >
+          <a
+            class="hidden sm:flex w-9 h-9 rounded-full bg-primary hover:bg-[#47710A] text-on-primary items-center justify-center shrink-0 transition-colors"
+            href="profile.html"
+            aria-label="My profile"
+            title="My profile"
+            data-profile-link
+            data-auth-in
+          >
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-profile-avatar-icon>person</span
+            ><span
+              class="hidden font-label-sm text-[12px] font-bold tracking-wide text-[#F7C75D]"
+              data-profile-avatar-text
+            ></span>
+          </a>
+          <button
+            class="xl:hidden w-11 h-11 rounded-full border border-line bg-surface hover:bg-pale-leaf transition-colors flex items-center justify-center text-primary-container shrink-0"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-toggle
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile / tablet menu (below 1280px) -->
+      <div
+        class="xl:hidden hidden border-t border-line bg-surface max-h-[calc(100dvh-4rem)] lg:max-h-[calc(100dvh-5rem)] overflow-y-auto"
+        id="mobile-menu"
+      >
+        <nav
+          class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-sm flex flex-col divide-y divide-line"
+          aria-label="Mobile navigation"
+        >
+          <details class="group" data-nav-group="discover">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Discover<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-story.html"
+                >Our story</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="the-farm.html"
+                >The farm</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-team.html"
+                >Our team</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-animals.html"
+                >Our animals</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="how-we-farm.html"
+                >How we farm</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="shop">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Aubingo Shop<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=harvest"
+                >This week's harvest</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=kitchen"
+                >From our kitchen</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=seeds"
+                >Seeds and saplings</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="special-enquiries.html"
+                >Special enquiries</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="visit">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Visit Kambafarm<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="saturday-farm-tour.html"
+                >Saturday farm tour</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="kambafarm-weekend.html"
+                >Kambafarm Weekend</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="practical-information.html"
+                >Practical information</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="news">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Kambafarm News<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="farm-stories.html"
+                >Farm stories</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="product-knowledge-sheets.html"
+                >Product knowledge sheets</a
+              >
+            </div>
+          </details>
+          <a
+            class="flex items-center gap-3 py-3 font-label text-label text-primary-container hover:text-secondary"
+            href="profile.html"
+            data-auth-in
+          >
+            <span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0"
+              ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">person</span></span
+            >My profile
+          </a>
+          <a
+            class="flex items-center gap-3 py-3 font-label text-label text-primary-container hover:text-secondary"
+            href="login.html"
+            data-auth-out
+          >
+            <span class="w-8 h-8 rounded-full bg-[#061C00] text-[#FBF8EF] flex items-center justify-center shrink-0"
+              ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">login</span></span
+            >Login / Sign up
+          </a>
+          <div class="flex flex-wrap items-center gap-space-sm py-4" role="menu" aria-label="Language">
+            <span class="material-symbols-outlined text-small text-outline" aria-hidden="true">language</span>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-label-sm text-label-sm text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="EN"
+              data-lang="en"
+              data-lang-pill
+            >
+              EN
+            </button>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-deva-label text-deva-label text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="हिं (Hindi)"
+              data-lang="hi"
+              data-lang-pill
+            >
+              हिं
+            </button>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-deva-label text-deva-label text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="मरा (Marathi)"
+              data-lang="mr"
+              data-lang-pill
+            >
+              मरा
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script data-header-boot>
+      /*
+       * Header boot — runs inline right after </header> on every page, before the
+       * first paint, so the header never jumps or flashes on load:
+       *   - shows the saved language (EN / हिं / मरा)
+       *   - shows the saved basket count
+       *   - highlights the menu section of the current page
+       * This file is the source of the inline "header boot" script in each page.
+       * Click handling lives in main.js.
+       */
+      (function () {
+        var doc = document;
+        var root = doc.documentElement;
+        var LANGS = { en: "EN", hi: "हिं", mr: "मरा" };
+
+        function read(key) {
+          try {
+            return window.localStorage.getItem(key);
+          } catch (e) {
+            return null;
+          }
+        }
+
+        window.kfApplyLanguage = function (lang) {
+          if (!LANGS[lang]) lang = "en";
+          var deva = lang !== "en";
+          root.setAttribute("lang", lang);
+          root.setAttribute("data-site-lang", lang);
+          doc.querySelectorAll("[data-lang-current]").forEach(function (el) {
+            el.textContent = LANGS[lang];
+            el.classList.toggle("font-deva-label", deva);
+            el.classList.toggle("text-deva-label", deva);
+          });
+          doc.querySelectorAll("button[data-lang]").forEach(function (btn) {
+            var on = btn.getAttribute("data-lang") === lang;
+            btn.setAttribute("aria-checked", String(on));
+            btn.classList.toggle("text-secondary", on);
+            btn.classList.toggle("font-bold", on);
+            btn.classList.toggle("text-on-surface", !on);
+            if (btn.hasAttribute("data-lang-pill")) btn.classList.toggle("bg-pale-leaf", on);
+          });
+          return lang;
+        };
+        window.kfApplyLanguage(read("kambafarm.lang") || "en");
+
+        // Badge shows how many DIFFERENT products are in the basket (6 jars of one item = 1)
+        var count = 0;
+        try {
+          var saved = JSON.parse(read("kambafarm.basket.v1"));
+          count = Array.isArray(saved) ? saved.length : 0;
+        } catch (e) {
+          /* empty basket */
+        }
+        // Basket icon badge: hidden when empty, "99+" cap so it stays round
+        window.kfShowBasketCount = function (n) {
+          doc.querySelectorAll("[data-basket-count]").forEach(function (el) {
+            el.textContent = n > 99 ? "99+" : String(n);
+            el.classList.toggle("hidden", n < 1);
+          });
+          doc.querySelectorAll("[data-basket-link]").forEach(function (el) {
+            el.setAttribute("aria-label", "Basket, " + n + (n === 1 ? " product" : " products"));
+          });
+        };
+        window.kfShowBasketCount(count);
+
+        // Logged in or not (demo login, stored in this browser): CSS shows the Login
+        // button or the profile icon from <html data-auth="in|out">
+        var session = null;
+        try {
+          session = JSON.parse(read("kambafarm.session.v1"));
+        } catch (e) {
+          session = null;
+        }
+        root.setAttribute("data-auth", session && session.email ? "in" : "out");
+
+        // Profile avatar: show the visitor's initials once they have saved a name
+        window.kfShowProfileAvatar = function (name) {
+          var initials = String(name || "")
+            .trim()
+            .split(/\s+/)
+            .filter(Boolean)
+            .slice(0, 2)
+            .map(function (w) {
+              return w.charAt(0);
+            })
+            .join("")
+            .toUpperCase();
+          doc.querySelectorAll("[data-profile-avatar-text]").forEach(function (el) {
+            el.textContent = initials;
+            el.classList.toggle("hidden", !initials);
+          });
+          doc.querySelectorAll("[data-profile-avatar-icon]").forEach(function (el) {
+            el.classList.toggle("hidden", !!initials);
+          });
+        };
+        try {
+          window.kfShowProfileAvatar((JSON.parse(read("kambafarm.profile.v1")) || {}).name);
+        } catch (e) {
+          /* no profile yet */
+        }
+
+        var SECTION = {
+          "our-story.html": "discover",
+          "the-farm.html": "discover",
+          "our-team.html": "discover",
+          "our-animals.html": "discover",
+          "how-we-farm.html": "discover",
+          "shop.html": "shop",
+          "product-turmeric.html": "shop",
+          "special-enquiries.html": "shop",
+          "saturday-farm-tour.html": "visit",
+          "kambafarm-weekend.html": "visit",
+          "practical-information.html": "visit",
+          "product-knowledge-sheets.html": "news",
+          "farm-stories.html": "news",
+        };
+        var file = window.location.pathname.split("/").pop() || "index.html";
+        if (file.indexOf("story-") === 0) SECTION[file] = "news"; // single blog posts
+        var here = file + window.location.search;
+
+        doc.querySelectorAll("#site-header [data-nav-group]").forEach(function (group) {
+          var active = SECTION[file] === group.getAttribute("data-nav-group");
+          var trigger = group.querySelector("[data-nav-trigger]");
+          if (active && trigger) {
+            trigger.classList.remove("text-primary-container");
+            trigger.classList.add("text-secondary");
+            if (group.tagName === "DETAILS") group.open = true;
+          }
+          group.querySelectorAll("a[href]").forEach(function (a) {
+            if (a.getAttribute("href") !== here) return;
+            a.classList.remove("text-on-surface");
+            a.classList.add("bg-pale-leaf", "text-leaf-dark");
+            a.setAttribute("aria-current", "page");
+          });
+        });
+      })();
+    </script>
+    <main class="flex-1 w-full bg-surface" id="main-content">
+      <div class="flex flex-col w-full text-on-surface">
+        <section class="flex flex-col w-full" id="view-practical">
+          <div class="w-full bg-pale-leaf py-12 md:py-16 border-b border-line">
+            <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex flex-col gap-2">
+              <div class="w-8 h-[3px] bg-roselle-red rounded-full mb-2"></div>
+              <h1 class="font-h1 text-[40px] md:text-[46px] leading-[48px] md:leading-[56px] font-bold text-[#061C00]">
+                Practical information
+              </h1>
+              <p class="font-body text-[16px] md:text-[18px] text-ink-muted max-w-2xl mt-1">
+                Directions, delivery, visiting guidelines, frequently asked questions and the farm's terms and policies,
+                all on one page.
+              </p>
+              <p class="mt-2 inline-flex items-center gap-1.5 font-small text-[13px] text-ink-muted">
+                <span class="material-symbols-outlined text-[16px] text-secondary" aria-hidden="true">update</span>Last
+                updated: 26 November 2026
+              </p>
+            </div>
+          </div>
+
+          <!-- Practical information: terms-style document -->
+          <div class="w-full bg-surface py-12 md:py-16">
+            <div
+              class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12"
+            >
+              <aside class="lg:col-span-4 xl:col-span-3">
+                <div class="lg:sticky lg:top-24 flex flex-col gap-4">
+                  <nav class="bg-white rounded-2xl border border-line p-4" aria-label="On this page">
+                    <p class="px-3 pt-1 pb-3 font-label-sm text-label-sm uppercase tracking-[0.12em] text-secondary">
+                      On this page
+                    </p>
+                    <ol class="flex flex-col gap-0.5">
+                      <li>
+                        <a
+                          href="#tab-directions"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >01</span
+                          ><span>Directions &amp; contact</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#tab-delivery"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >02</span
+                          ><span>Delivery in Pune &amp; PCMC</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#tab-safety"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >03</span
+                          ><span>Visiting &amp; safety</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#tab-faq"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >04</span
+                          ><span>Frequently asked questions</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#tab-policies"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >05</span
+                          ><span>Farm policies &amp; terms</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#tab-certification"
+                          data-toc-link
+                          class="flex items-center gap-3 px-3 py-2 rounded-lg font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark transition-colors"
+                        >
+                          <span
+                            class="w-6 h-6 rounded-full bg-pale-leaf text-secondary text-[11px] font-bold flex items-center justify-center shrink-0"
+                            >06</span
+                          ><span>Certification &amp; standards</span></a
+                        >
+                      </li>
+                    </ol>
+                  </nav>
+                  <div class="hidden lg:flex bg-pale-leaf rounded-2xl border border-line p-5 flex-col gap-3">
+                    <p class="font-label text-label text-primary-container">Still have a question?</p>
+                    <p class="font-small text-[13px] leading-5 text-ink-muted">
+                      The farm office replies on WhatsApp and email, Monday to Saturday.
+                    </p>
+                    <a
+                      href="https://wa.me/917990039450"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="h-10 px-4 rounded-full bg-[#47710A] hover:bg-[#385A07] text-[#FBF8EF] font-label text-label flex items-center justify-center gap-2 transition-colors"
+                      ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">chat</span>WhatsApp us</a
+                    >
+                    <a
+                      href="mailto:connect@kambafarm.in"
+                      class="h-10 px-4 rounded-full border border-line-strong/40 bg-[#FBF8EF] text-primary-container hover:border-secondary hover:text-secondary font-label text-label flex items-center justify-center gap-2 transition-colors"
+                      ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">mail</span>Email us</a
+                    >
+                  </div>
+                </div>
+              </aside>
+              <div class="lg:col-span-8 xl:col-span-9 min-w-0">
+                <!-- 01. Directions &amp; contact -->
+                <section class="pt-0" id="tab-directions" aria-labelledby="tab-directions-title">
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >01 · Getting here</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-directions-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Directions &amp; contact
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      Find the farm, call or message the farm office, and read the gate policy before you travel.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <!-- 1. Map Card Container -->
+                    <div class="bg-[#EFF2E4] rounded-2xl p-5 border border-line flex flex-col gap-4 shadow-sm">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                          <span class="material-symbols-outlined text-[#47710A] text-[20px]">location_on</span>
+                          <h2 class="font-h2 text-[16px] font-semibold text-[#061C00]">Near Nasrapur, Pune</h2>
+                        </div>
+                      </div>
+
+                      <!-- Map Graphic Area -->
+                      <div
+                        class="relative rounded-xl overflow-hidden aspect-[16/9] md:aspect-[21/9] border border-line bg-[#E4E9D5] shadow-inner flex items-center justify-center"
+                      >
+                        <!-- Stylized topo map contours and roads vector -->
+                        <svg
+                          class="absolute inset-0 w-full h-full opacity-60 pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 600 340"
+                          preserveAspectRatio="xMidYMid slice"
+                        >
+                          <path
+                            d="M-20,180 C120,140 240,220 380,160 C480,110 560,190 620,170"
+                            fill="none"
+                            stroke="#c8d2b7"
+                            stroke-width="2"
+                          ></path>
+                          <path
+                            d="M-20,240 C140,200 280,260 420,220 C500,190 580,250 620,230"
+                            fill="none"
+                            stroke="#c8d2b7"
+                            stroke-width="1.5"
+                            stroke-dasharray="4,4"
+                          ></path>
+                          <path
+                            d="M-20,100 C150,70 290,130 430,90 C510,70 570,120 620,100"
+                            fill="none"
+                            stroke="#c8d2b7"
+                            stroke-width="1.5"
+                          ></path>
+                          <!-- Main arterial road -->
+                          <path
+                            d="M80,-20 C110,90 200,160 300,170 C410,180 500,260 520,360"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="7"
+                            stroke-linecap="round"
+                          ></path>
+                          <path
+                            d="M80,-20 C110,90 200,160 300,170 C410,180 500,260 520,360"
+                            fill="none"
+                            stroke="#d0d8c0"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                          ></path>
+                          <!-- Connecting swale path -->
+                          <path
+                            d="M300,170 C270,220 220,240 180,360"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="4"
+                            stroke-dasharray="3,3"
+                          ></path>
+                        </svg>
+
+                        <!-- Centered Pin and Pill -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5">
+                          <div
+                            class="w-10 h-10 rounded-full bg-[#47710A] text-[#FBF8EF] flex items-center justify-center shadow-md border-2 border-[#FBF8EF]"
+                          >
+                            <span class="material-symbols-outlined text-[20px]">eco</span>
+                          </div>
+                          <span
+                            class="px-3 py-1 rounded-full bg-[#061C00] text-[#FBF8EF] text-xs font-semibold tracking-wide shadow-md font-label flex items-center gap-1"
+                          >
+                            <span>Aubingo @Kambafarm</span>
+                          </span>
+                        </div>
+
+                        <!-- Bottom overlay callout -->
+                      </div>
+                    </div>
+
+                    <!-- 2. Four Info Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <!-- Card 1: Address -->
+                      <div
+                        class="bg-[#EFF2E4] rounded-xl p-4 border border-line flex flex-col justify-between shadow-sm gap-2"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span class="material-symbols-outlined text-[#47710A] text-[20px]">pin_drop</span>
+                          <h3 class="font-bold text-[14px] text-[#061C00]">Farm Address</h3>
+                        </div>
+                        <p class="text-xs text-[#45503D] leading-relaxed">
+                          Aubingo Farmer Producer Co., Kambafarm, near Nasrapur, about 50 km from Pune. Full address and
+                          map pin to follow.
+                        </p>
+                      </div>
+
+                      <!-- Card 2: Phone & WhatsApp -->
+                      <div
+                        class="bg-[#EFF2E4] rounded-xl p-4 border border-line flex flex-col justify-between shadow-sm gap-2"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span class="material-symbols-outlined text-[#47710A] text-[20px]">chat</span>
+                          <h3 class="font-bold text-[14px] text-[#061C00]">Phone &amp; WhatsApp</h3>
+                        </div>
+                        <div>
+                          <p class="text-xs font-semibold text-[#061C00]">+91 98230 00000</p>
+                          <p class="text-[11px] text-[#5E6B54] mt-0.5">Mon-Sat, 9:00 am - 6:00 pm</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 3: Email Enquiries -->
+                      <div
+                        class="bg-[#EFF2E4] rounded-xl p-4 border border-line flex flex-col justify-between shadow-sm gap-2"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span class="material-symbols-outlined text-[#47710A] text-[20px]">mail</span>
+                          <h3 class="font-bold text-[14px] text-[#061C00]">Email Enquiries</h3>
+                        </div>
+                        <div>
+                          <a
+                            href="mailto:connect@kambafarm.in"
+                            class="text-xs font-semibold text-[#385A07] hover:underline"
+                            >connect@kambafarm.in</a
+                          >
+                          <p class="text-[11px] text-[#5E6B54] mt-0.5">Direct farm communications</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 4: Gate Access Policy -->
+                      <div
+                        class="bg-[#EFF2E4] rounded-xl p-4 border border-line flex flex-col justify-between shadow-sm gap-2"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span class="material-symbols-outlined text-[#47710A] text-[20px]">shield</span>
+                          <h3 class="font-bold text-[14px] text-[#061C00]">Gate Access Policy</h3>
+                        </div>
+                        <p class="text-xs text-[#45503D] leading-relaxed">
+                          Confirmed weekend stays &amp; Saturday tours only. No walk-ins.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 3. Strict Visitor Protocol Banner -->
+                    <div class="bg-[#FBF3DC] rounded-xl p-4 border border-[#F7C75D] flex items-start gap-3 shadow-sm">
+                      <span class="material-symbols-outlined text-[#8A3B18] text-[22px] shrink-0 mt-0.5"
+                        >error_outline</span
+                      >
+                      <div class="text-xs text-[#45503D] leading-relaxed">
+                        <strong class="text-[#061C00] font-semibold">Strict visitor protocol:</strong> To protect
+                        agrarian rhythms and sanctuary wildlife, farm entry is reserved for guests with prior confirmed
+                        bookings (Saturday Farm Tour or Kambafarm Weekend stay). Unscheduled arrivals cannot be
+                        accommodated at the gate.
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 02. Delivery in Pune &amp; PCMC -->
+                <section
+                  class="pt-12 md:pt-14 mt-12 md:mt-14 border-t border-line"
+                  id="tab-delivery"
+                  aria-labelledby="tab-delivery-title"
+                >
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >02 · Delivery &amp; collection</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-delivery-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Delivery in Pune &amp; PCMC
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      We harvest and prepare orders at dawn at Kambafarm and deliver them fresh to your doorstep in Pune
+                      and PCMC.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-8">
+                    <div
+                      class="bg-[#ffdf9f] text-[#261a00] rounded-2xl p-4 md:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-[#F7C75D]"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[24px] text-[#261a00]">schedule</span>
+                        <div>
+                          <p class="font-bold text-xs leading-snug">Scheduled Harvest Dispatches</p>
+                          <p class="text-xs leading-snug">
+                            We deliver in Pune on Tuesday, Wednesday and Friday · Minimum order ₹500 for the whole
+                            basket.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 shrink-0">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 text-[#261a00] font-bold text-[11px]"
+                          >Tuesday</span
+                        ><span class="px-2.5 py-1 rounded-full bg-white/70 text-[#261a00] font-bold text-[11px]"
+                          >Wednesday</span
+                        ><span class="px-2.5 py-1 rounded-full bg-white/70 text-[#261a00] font-bold text-[11px]"
+                          >Friday</span
+                        >
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-line overflow-hidden shadow-sm">
+                      <div
+                        class="p-5 border-b border-line bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+                      >
+                        <h3 class="font-bold text-[16px] text-[#061C00]">Delivery Fee Matrix by Pune Zone</h3>
+                        <span class="text-xs text-[#5E6B54]">Order cutoff: 6:00 PM the evening prior</span>
+                      </div>
+                      <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                          <thead class="bg-[#f1eee5] text-[#061C00] font-semibold">
+                            <tr>
+                              <th class="p-3.5 border-b border-line">Zone / Band</th>
+                              <th class="p-3.5 border-b border-line">Localities Covered</th>
+                              <th class="p-3.5 border-b border-line">Delivery Fee</th>
+                              <th class="p-3.5 border-b border-line">Free Delivery Above</th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-line text-[#45503D]">
+                            <tr class="hover:bg-pale-leaf/50 transition-colors">
+                              <td class="p-3.5 font-bold text-primary">Band 1: South &amp; West Pune</td>
+                              <td class="p-3.5">
+                                Kothrud, Karve Nagar, Erandwane, Deccan, Sinhagad Road, Warje, Bavdhan, Pashan, Baner
+                              </td>
+                              <td class="p-3.5 font-semibold text-[#061C00]">₹100</td>
+                              <td class="p-3.5 text-[#385A07] font-semibold">₹1,200</td>
+                            </tr>
+                            <tr class="hover:bg-pale-leaf/50 transition-colors">
+                              <td class="p-3.5 font-bold text-primary">Band 2: Central Pune &amp; Camp</td>
+                              <td class="p-3.5">
+                                Shivajinagar, Model Colony, Camp, Koregaon Park, Kalyani Nagar, Boat Club Road, Bund
+                                Garden
+                              </td>
+                              <td class="p-3.5 font-semibold text-[#061C00]">₹150</td>
+                              <td class="p-3.5 text-[#385A07] font-semibold">₹1,500</td>
+                            </tr>
+                            <tr class="hover:bg-pale-leaf/50 transition-colors">
+                              <td class="p-3.5 font-bold text-primary">Band 3: East &amp; North Pune</td>
+                              <td class="p-3.5">
+                                Viman Nagar, Kharadi, Magarpatta, Hadapsar, Wanowrie, Aundh, Wakad, Balewadi, Hinjewadi
+                                Phase 1-3
+                              </td>
+                              <td class="p-3.5 font-semibold text-[#061C00]">₹200</td>
+                              <td class="p-3.5 text-[#385A07] font-semibold">₹2,000</td>
+                            </tr>
+                            <tr class="hover:bg-pale-leaf/50 transition-colors">
+                              <td class="p-3.5 font-bold text-primary">Band 4: PCMC &amp; Extended Outer</td>
+                              <td class="p-3.5">Pimpri, Chinchwad, Nigdi, Ravet, Moshi, Bhosari, Undri, Pisoli</td>
+                              <td class="p-3.5 font-semibold text-[#061C00]">₹250</td>
+                              <td class="p-3.5 text-[#385A07] font-semibold">₹2,500</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">shopping_basket</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Minimum Basket ₹500</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            To keep small farm delivery footprints viable, all orders across shop items require a
+                            combined minimum of ₹500.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">storefront</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Kambafarm Gate Collection</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Free pickup directly at the farm on Saturdays during tour hours or by advance appointment
+                            with Rahul.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">potted_plant</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Seeds &amp; Saplings Freight</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Saplings are transported in eco-crates without tipping. Large bulk orders may require
+                            vehicle coordination.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">science</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Raw Goat Milk Protocols</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Chilled directly after milking and transported in insulated cold boxes. Strictly delivered
+                            same morning.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">doorbell</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Unattended Delivery Policy</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            If you are away, our driver leaves produce with building security in shaded insulated cooler
+                            bags with your consent.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div
+                            class="w-8 h-8 rounded-full bg-pale-leaf text-[#385A07] flex items-center justify-center"
+                          >
+                            <span class="material-symbols-outlined text-[18px]">recycling</span>
+                          </div>
+                          <h4 class="font-bold text-[14px] text-[#061C00]">Reusable Packing Return</h4>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Return glass bottles, ceramic jars and cotton bags to our delivery team on next drop for a
+                            ₹20 return credit per jar.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 03. Visiting &amp; safety -->
+                <section
+                  class="pt-12 md:pt-14 mt-12 md:mt-14 border-t border-line"
+                  id="tab-safety"
+                  aria-labelledby="tab-safety-title"
+                >
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >03 · Visiting</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-safety-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Visiting &amp; safety
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      Important preparations for walking through living agroforestry terrain at Kambafarm.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-8">
+                    <div
+                      class="relative rounded-2xl overflow-hidden aspect-[16/8] border border-line bg-surface-container shadow-sm"
+                    >
+                      <img
+                        loading="lazy"
+                        alt="Verandah and garden pathway at Kambafarm"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVq_HNSKuGx3HveXpLyf-vhrswY9Ml3ezX91yOiSbx-uTqGD7vk6lXAi4EYoAAVnXJspEuQMnu76I7Y0wMHNPxjPFomSj0WRpUTaWBedg7s3gttKOJcexUExgeAU0CPdbYNX2yU1Guq-WNvuk7lVC9YzDhDro4Ue0LgGu65VWSQ-x_HqpEL-98sA2lX9Myz1rpE_7C95WaGotpE0YhAle_7X8A_z2IO41EjIZ9okSi"
+                      />
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#385A07] text-[20px]">schedule</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Arrival &amp; Timing</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Saturday tours begin punctually at 9:30 AM with fresh herbal chai. Please allow 1 hr 45 min
+                            from Pune to arrive relaxed without rushing.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#385A07] text-[20px]">hiking</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Accessibility &amp; Terrain</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Our trails follow natural contour swales and terraced slopes. While paths are wide and
+                            graded, they involve uneven soil and slight inclines.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#385A07] text-[20px]">pets</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Free-Roaming Dogs &amp; Animals</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            7 gentle vaccinated rescue dogs move freely on the farm. They welcome calm human contact.
+                            Outside visiting pets require prior written consent.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#385A07] text-[20px]">nature</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Western Ghats Wildlife</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            You will encounter harmless reptiles, hares, birds and insects. Always watch where you place
+                            your feet and stay on established walking swales.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#385A07] text-[20px]">checkroom</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Footwear &amp; Clothing</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Closed-toe walking shoes or boots with tread are required. Loose cotton trousers, sun hats,
+                            and water bottles are strongly recommended.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#8A3B18] text-[20px]">smoke_free</span>
+                            <h3 class="font-bold text-[15px] text-[#061C00]">Zero Synthetic &amp; Smoke-Free</h3>
+                          </div>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            No smoking or single-use plastics anywhere on the farm. Please take all non-biodegradable
+                            personal rubbish back home with you.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 04. Frequently asked questions -->
+                <section
+                  class="pt-12 md:pt-14 mt-12 md:mt-14 border-t border-line"
+                  id="tab-faq"
+                  aria-labelledby="tab-faq-title"
+                >
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >04 · FAQ</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-faq-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Frequently asked questions
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      Direct answers regarding shopping, visits, and agroforestry routines.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <div class="space-y-3">
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>When do you harvest and deliver to Pune?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          We deliver to Pune on Tuesday, Wednesday, and Friday. Harvest occurs at pre-dawn on delivery
+                          morning to preserve vitality and volatile aromatic compounds. Place your orders by 6:00 PM the
+                          previous evening.
+                        </p>
+                      </details>
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>Can I combine food staples and saplings into one order?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          Yes! You can combine kitchen products (turmeric, honey, pickles) and native saplings into a
+                          single checkout basket. Saplings are secured in separate crates within the delivery vehicle so
+                          roots remain undisturbed.
+                        </p>
+                      </details>
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>Are Saturday tours suitable for children?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          Yes, children aged 6 and above thoroughly enjoy meeting the ducks, goats, and learning compost
+                          microbiology. Children aged 6-14 receive reduced ticket pricing (₹900). Sturdy shoes are
+                          required for all young explorers.
+                        </p>
+                      </details>
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>How far in advance should we request a weekend farm stay?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          Because we host only one exclusive party or family per weekend to preserve solitude, dates
+                          fill 3-6 weeks in advance, especially during winter and monsoon weekends. Please submit your
+                          request early.
+                        </p>
+                      </details>
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>How is raw goat milk packaged and delivered?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          Our Osmanabadi goats are milked clean at sunrise. The unpasteurized milk is chilled
+                          immediately in sterilized food-grade glass flasks and transported in insulated cold boxes. It
+                          must be refrigerated upon receipt and consumed within 48 hours.
+                        </p>
+                      </details>
+                      <details class="group bg-white rounded-2xl p-5 border border-line shadow-sm cursor-pointer">
+                        <summary
+                          class="font-bold text-[15px] text-[#061C00] flex justify-between items-center list-none"
+                        >
+                          <span>Do you offer tours in Marathi and Hindi?</span
+                          ><span
+                            class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <p class="text-xs text-[#45503D] pt-3 leading-relaxed border-t border-line mt-3">
+                          Yes! Shobha, Dnyaneshwar, and the farm team are native Marathi speakers. Tours can be
+                          conducted comfortably in Marathi, Hindi, or English based on the preference of the group.
+                        </p>
+                      </details>
+                    </div>
+                    <div
+                      class="bg-[#EFF2E4] rounded-2xl p-6 border border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-10 h-10 rounded-full bg-[#385A07] text-[#EFF2E4] flex items-center justify-center shrink-0"
+                        >
+                          <span class="material-symbols-outlined text-[20px]">chat</span>
+                        </div>
+                        <div>
+                          <p class="font-bold text-xs text-[#061C00]">Have a specific question not answered here?</p>
+                          <p class="text-xs text-[#45503D]">
+                            Send us a direct note on WhatsApp for quick agrarian advice.
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        class="h-10 px-5 rounded-full bg-[#385A07] hover:bg-[#1A3310] text-surface font-label text-xs font-semibold flex items-center gap-1.5 shrink-0 transition-colors shadow-sm"
+                        href="https://wa.me/917990039450"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        ><span class="material-symbols-outlined text-[16px]">chat</span><span>Ask via WhatsApp</span></a
+                      >
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 05. Farm policies &amp; terms -->
+                <section
+                  class="pt-12 md:pt-14 mt-12 md:mt-14 border-t border-line"
+                  id="tab-policies"
+                  aria-labelledby="tab-policies-title"
+                >
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >05 · Policies</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-policies-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Farm policies &amp; terms
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      Fair, transparent principles governing our collective harvests and farm hospitality.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Terms &amp; Conditions</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Purchases from Aubingo Farmer Producer Co. directly support regional agroforestry
+                            cultivators. All harvest weights are natural and subject to seasonal variances.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          APPLIES TO ALL ORDERS
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Privacy Policy</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            We never sell or disclose contact information. Your WhatsApp and address are solely utilized
+                            for order coordination and scheduled farm visits.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          ZERO DATA BROKERAGE
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Refunds &amp; Returns</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            If fresh produce arrives damaged or compromised, simply share a photograph within 12 hours
+                            of delivery for an immediate refund or replacement.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          NO SQUABBLE REPLACEMENTS
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Shipping &amp; Delivery</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Deliveries occur along structured geographic routes on Tuesdays, Wednesdays, and Fridays.
+                            Drivers make direct contact prior to arrival.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          DOORSTEP PROTOCOL
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Cancellation &amp; Transfer</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Saturday farm tour bookings can be rescheduled up to 48 hours prior. Weekend stay
+                            reservations require 7 days notice for full credit transfer.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          FAIR RESCHEDULING
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-5 border border-line flex flex-col justify-between shadow-sm">
+                        <div class="space-y-2">
+                          <h3 class="font-bold text-[15px] text-[#061C00]">Guest Terms &amp; Risk Acknowledgement</h3>
+                          <p class="text-xs text-[#45503D] leading-relaxed">
+                            Guests acknowledge walking in a functioning agrarian sanctuary with natural wildlife,
+                            weather variations, and free-roaming farm animals.
+                          </p>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-line text-[11px] text-[#5E6B54] font-semibold">
+                          SANCTUARY COVENANT
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- 06. Certification & standards -->
+                <section
+                  class="pt-12 md:pt-14 mt-12 md:mt-14 border-t border-line"
+                  id="tab-certification"
+                  aria-labelledby="tab-certification-title"
+                >
+                  <div class="max-w-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span class="w-8 h-[3px] rounded-full bg-[#7D202B]" aria-hidden="true"></span>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.12em]"
+                        >06 · Certification</span
+                      >
+                    </div>
+                    <h2
+                      id="tab-certification-title"
+                      class="font-h1 text-[26px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold tracking-tight text-[#061C00]"
+                    >
+                      Certification &amp; standards
+                    </h2>
+                    <p class="mt-3 font-body text-body text-ink-muted">
+                      How we farm, how we check it, and how you can see it for yourself.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <div
+                      class="rounded-2xl bg-[#061C00] text-[#FBF8EF] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5"
+                    >
+                      <span
+                        class="w-14 h-14 rounded-full bg-white flex items-center justify-center shrink-0 overflow-hidden"
+                        ><img
+                          src="assets/img/farm/greencert-organic-logo.png"
+                          alt="GreenCert Organic"
+                          class="w-10 h-10 object-contain"
+                          loading="lazy"
+                      /></span>
+                      <div>
+                        <p class="font-h3 text-[20px] leading-[28px]">Kambafarm is certified organic by Greencert</p>
+                        <p class="mt-1 font-small text-small leading-relaxed text-[#EFF2E4]/85">
+                          Kambafarm is a Greencert-certified organic farm, and we do not use synthetic chemicals. Our
+                          goat milk, when available, will not be sold as organic, because part of the goats'
+                          supplementary feed is not organically certified.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div class="bg-white rounded-2xl p-6 border border-line flex flex-col gap-3 shadow-sm">
+                        <span class="w-11 h-11 rounded-full bg-pale-leaf flex items-center justify-center"
+                          ><span class="material-symbols-outlined text-secondary text-[22px]" aria-hidden="true"
+                            >spa</span
+                          ></span
+                        >
+                        <h3 class="font-h3 text-[18px] leading-[26px] text-[#061C00]">Zero synthetic inputs</h3>
+                        <p class="font-small text-small leading-relaxed text-ink-muted">
+                          No chemical fertilisers, pesticides, herbicides or growth regulators are used on any field,
+                          orchard or nursery bed. Soil is fed with mulch, compost and on-farm ferments.
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-2xl p-6 border border-line flex flex-col gap-3 shadow-sm">
+                        <span class="w-11 h-11 rounded-full bg-pale-leaf flex items-center justify-center"
+                          ><span class="material-symbols-outlined text-secondary text-[22px]" aria-hidden="true"
+                            >verified</span
+                          ></span
+                        >
+                        <h3 class="font-h3 text-[18px] leading-[26px] text-[#061C00]">Greencert certified organic</h3>
+                        <p class="font-small text-small leading-relaxed text-ink-muted">
+                          The whole farm is organically certified by Greencert. Certificate details are available from
+                          the farm office on request.
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-2xl p-6 border border-line flex flex-col gap-3 shadow-sm">
+                        <span class="w-11 h-11 rounded-full bg-pale-leaf flex items-center justify-center"
+                          ><span class="material-symbols-outlined text-secondary text-[22px]" aria-hidden="true"
+                            >science</span
+                          ></span
+                        >
+                        <h3 class="font-h3 text-[18px] leading-[26px] text-[#061C00]">Batch testing</h3>
+                        <p class="font-small text-small leading-relaxed text-ink-muted">
+                          Kitchen products such as turmeric are tested batch by batch before packing. Results are shared
+                          on each product knowledge sheet.
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-2xl p-6 border border-line flex flex-col gap-3 shadow-sm">
+                        <span class="w-11 h-11 rounded-full bg-pale-leaf flex items-center justify-center"
+                          ><span class="material-symbols-outlined text-secondary text-[22px]" aria-hidden="true"
+                            >visibility</span
+                          ></span
+                        >
+                        <h3 class="font-h3 text-[18px] leading-[26px] text-[#061C00]">Open to inspection</h3>
+                        <p class="font-small text-small leading-relaxed text-ink-muted">
+                          Every parcel of land, water testing record and soil enrichment method can be seen and
+                          discussed during the Saturday farm tour.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rounded-2xl border border-[#F7C75D] bg-[#FBF3DC] p-5 flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-[#8A3B18] text-[22px] shrink-0 mt-0.5"
+                        aria-hidden="true"
+                        >description</span
+                      >
+                      <p class="font-small text-small leading-relaxed text-[#45503D]">
+                        <strong class="text-[#061C00] font-semibold">Want to see our records?</strong> Ask the farm
+                        office for the latest inspection notes and test reports at
+                        <a href="mailto:connect@kambafarm.in" class="font-semibold text-[#385A07] underline-offset-2"
+                          >connect@kambafarm.in</a
+                        >, or on WhatsApp.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      id="site-footer"
+      class="w-full bg-[#061C00] text-[#FBF8EF] pt-space-xl pb-space-lg border-t border-[#47710A]/20 relative"
+    >
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg lg:gap-16 lg:items-end pb-space-xl mb-space-xl border-b border-[#FBF8EF]/10"
+        >
+          <div>
+            <h3 class="font-h2 text-[26px] leading-[34px] md:text-[28px] md:leading-[36px] text-[#FBF8EF]">
+              Farm news by email
+            </h3>
+            <p class="mt-2 font-body text-body text-[#EFF2E4]/80 max-w-lg">
+              Receive quiet updates on seasonal yields, sapling distributions, and Saturday gathering schedules.
+            </p>
+          </div>
+          <div>
+            <form class="flex flex-col sm:flex-row gap-space-sm" data-newsletter-form>
+              <input
+                class="h-12 w-full sm:w-auto sm:flex-1 min-w-0 px-5 rounded-full bg-[#FBF8EF] text-[#061C00] placeholder:text-ink-muted border border-transparent focus:outline-none focus:ring-2 focus:ring-[#F7C75D]"
+                placeholder="Your email address"
+                type="email"
+                required
+                aria-label="Your email address"
+              />
+              <button
+                class="kf-btn-subscribe relative isolate overflow-hidden h-12 px-7 rounded-full bg-[#F7C75D] text-[#061C00] font-label text-label font-bold whitespace-nowrap flex items-center justify-center gap-2"
+                type="submit"
+              >
+                <span class="kf-sub-text">Subscribe</span
+                ><span class="kf-sub-icon material-symbols-outlined text-[18px]" aria-hidden="true">send</span>
+              </button>
+            </form>
+            <label class="mt-3 flex items-start gap-2 font-small text-small text-[#EFF2E4]/75 cursor-pointer"
+              ><input class="mt-0.5 w-4 h-4 rounded accent-[#F7C75D] shrink-0" type="checkbox" /><span
+                >I consent to receiving seasonal agricultural updates. No spam or promotions.</span
+              ></label
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-gutter mb-space-xl">
+          <div class="lg:col-span-2 space-y-space-md">
+            <div class="bg-[#FBF8EF] rounded-xl px-3 py-2 inline-block">
+              <img
+                loading="lazy"
+                alt="Kambafarm logo"
+                class="h-8 lg:h-10 w-auto object-contain"
+                src="assets/img/kambafarm-logo.webp"
+                width="591"
+                height="200"
+              />
+            </div>
+            <p class="font-small text-small text-surface-container max-w-sm leading-relaxed">
+              A Greencert-certified organic agroforestry farm 50 km outside Pune, close to Nasrapur, run together with
+              Aubingo Farmer Producer Company, owned by our farm team.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Discover</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li><a href="our-story.html" class="hover:text-surface transition-colors">Our story</a></li>
+              <li><a href="the-farm.html" class="hover:text-surface transition-colors">The farm</a></li>
+              <li><a href="our-team.html" class="hover:text-surface transition-colors">Our team</a></li>
+              <li><a href="our-animals.html" class="hover:text-surface transition-colors">Our animals</a></li>
+              <li><a href="how-we-farm.html" class="hover:text-surface transition-colors">How we farm</a></li>
+              <li>
+                <a href="practical-information.html#tab-certification" class="hover:text-surface transition-colors"
+                  >Certification &amp; standards</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Aubingo Shop</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li>
+                <a href="shop.html?cat=harvest" class="hover:text-surface transition-colors">This week's harvest</a>
+              </li>
+              <li><a href="shop.html?cat=kitchen" class="hover:text-surface transition-colors">From our kitchen</a></li>
+              <li><a href="shop.html?cat=seeds" class="hover:text-surface transition-colors">Seeds and saplings</a></li>
+              <li>
+                <a href="special-enquiries.html" class="hover:text-surface transition-colors">Special enquiries</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Visit &amp; Stay</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li>
+                <a href="saturday-farm-tour.html" class="hover:text-surface transition-colors">Saturday farm tour</a>
+              </li>
+              <li>
+                <a href="kambafarm-weekend.html" class="hover:text-surface transition-colors">Kambafarm Weekend</a>
+              </li>
+              <li>
+                <a href="practical-information.html" class="hover:text-surface transition-colors">Practical info</a>
+              </li>
+              <li>
+                <a href="farm-stories.html" class="hover:text-surface transition-colors">Farm stories</a>
+              </li>
+              <li>
+                <a href="product-knowledge-sheets.html" class="hover:text-surface transition-colors">Kitchen recipes</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Contact</h4>
+            <div class="space-y-space-xs font-small text-small text-surface-container-high">
+              <p>Near Nasrapur, Pune</p>
+              <p class="pt-1 font-label text-label text-surface break-words">connect@kambafarm.in</p>
+              <p>+91 98230 00000</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg border-t border-[#FBF8EF]/10 flex flex-col md:flex-row items-center justify-between gap-space-md font-small text-small text-surface-container"
+        >
+          <p>© 2026 Aubingo @Kambafarm. Grown near Nasrapur, Pune.</p>
+          <div class="flex flex-wrap items-center gap-space-md">
+            <a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Terms</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Privacy</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Refunds</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors"
+              >Cookie settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-30" id="whatsapp-float">
+      <a
+        aria-label="Chat on WhatsApp"
+        title="Chat on WhatsApp"
+        class="w-14 h-14 rounded-full bg-[#47710A] hover:bg-[#061C00] text-[#FBF8EF] flex items-center justify-center shadow-[0_6px_20px_rgba(6,28,0,0.30)] transition-all duration-300 hover:scale-105 active:scale-95"
+        href="https://wa.me/917990039450"
+        rel="noopener noreferrer"
+        target="_blank"
+        ><span class="material-symbols-outlined text-[26px]" aria-hidden="true">chat</span></a
+      >
+    </div>
+    <div
+      class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-primary-container text-surface px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.2)] flex items-center gap-space-sm border border-line-strong hidden"
+      id="basket-toast"
+      role="status"
+      aria-live="polite"
+    >
+      <span class="material-symbols-outlined text-secondary-fixed text-small">check_circle</span
+      ><span class="font-label text-label" data-toast-msg>Added to basket</span>
+    </div>
+    <div
+      id="mini-stepper-toast"
+      role="status"
+      aria-live="polite"
+      class="fixed top-20 lg:top-24 right-6 z-50 bg-[#061C00] text-[#FBF8EF] px-4 py-2 rounded-full shadow-[0_8px_24px_rgba(6,28,0,0.3)] flex items-center gap-2 border border-[#47710A]/30 transition-all duration-300 pointer-events-none opacity-0 translate-y-[-10px] hidden"
+    >
+      <span class="material-symbols-outlined text-[#F7C75D] text-[18px]">add_circle</span
+      ><span class="font-label text-xs font-semibold text-[#FBF8EF]" id="mini-stepper-toast-msg"
+        >Quantity updated (+1)</span
+      >
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

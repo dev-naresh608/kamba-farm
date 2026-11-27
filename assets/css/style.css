@@ -1,0 +1,700 @@
+/* ==========================================================================
+   Aubingo @Kambafarm — site-wide styles that sit on top of tailwind.css
+   (colours / type / spacing tokens live in tailwind.config.js)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Fallback fonts sized like Inter / Poppins, so text (and the header menu)
+      doesn't shift when the Google fonts finish loading
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+  size-adjust: 107.12%;
+}
+@font-face {
+  font-family: 'Poppins Fallback';
+  src: local('Arial');
+  ascent-override: 92.33%;
+  descent-override: 30.78%;
+  line-gap-override: 8.79%;
+  size-adjust: 113.73%;
+}
+
+/* --------------------------------------------------------------------------
+   1. Base
+   -------------------------------------------------------------------------- */
+:root {
+  --kf-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --kf-header-h: 4rem; /* header is 64px on phones, 80px from 1024px */
+  interpolate-size: allow-keywords; /* lets <details> animate to height:auto */
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --kf-header-h: 5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  overflow-x: clip; /* no sideways wobble on phones; keeps the sticky header working */
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* No transitions while the page is loading — stops the header (and anything
+   else) from sliding into place on refresh. main.js removes .kf-preload. */
+html.kf-preload *,
+html.kf-preload *::before,
+html.kf-preload *::after {
+  transition: none !important;
+}
+
+/* Anchored sections land below the sticky header */
+[id] {
+  scroll-margin-top: calc(var(--kf-header-h) + 1rem);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a,
+summary,
+label,
+select {
+  touch-action: manipulation;
+}
+
+/* The design uses colour changes on hover, never underlines */
+a,
+button {
+  text-decoration: none !important;
+}
+
+a,
+button,
+summary {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+footer a:hover {
+  color: #fcf9f0 !important;
+}
+
+/* Material Symbols — every icon is a fixed 1em square, so while the icon font
+   is still loading its ligature name ("keyboard_arrow_down") can't take up
+   extra width and push the header / buttons around. */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ...but an icon marked .hidden must still hide (the rule above would otherwise win) */
+.material-symbols-outlined.hidden {
+  display: none;
+}
+
+/* <details> accordions: hide the default disclosure triangle */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}
+
+/* Keyboard users: visible focus ring in the leaf green */
+:focus-visible {
+  outline: 2px solid #47710a;
+  outline-offset: 2px;
+}
+
+/* Skip link (only shows when tabbed to) */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: #061c00;
+  color: #fbf8ef;
+  font: 600 14px/20px Inter, sans-serif;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. Responsive type — mobile sizes from the design system (DESIGN.md:
+      h1-mobile 32/40, hero-title-mobile 34/40, h2-mobile 24/32)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .text-h1,
+  .text-hero-title,
+  main h1 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  #view-home h1 {
+    font-size: 34px !important;
+    line-height: 40px !important;
+  }
+  .text-h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  .text-body-lg {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+/* Basket page uses a compact one-line header, so its title stays small on phones */
+@media (max-width: 767.98px) {
+  #view-basket h1 {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .text-h1,
+  .text-hero-title,
+  main h1,
+  #view-home h1 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Page-to-page transition (Chrome / Edge / Safari 18+; others just load)
+   -------------------------------------------------------------------------- */
+@view-transition {
+  navigation: auto;
+}
+
+#site-header {
+  view-transition-name: site-header;
+}
+#whatsapp-float {
+  view-transition-name: whatsapp-float;
+}
+
+/* Header and WhatsApp button stay perfectly still between pages (no sliding / morphing) */
+::view-transition-group(site-header),
+::view-transition-group(whatsapp-float),
+::view-transition-new(site-header),
+::view-transition-new(whatsapp-float) {
+  animation: none;
+}
+::view-transition-old(site-header),
+::view-transition-old(whatsapp-float) {
+  display: none;
+}
+
+::view-transition-old(root) {
+  animation: kf-fade-out 0.22s var(--kf-ease) both;
+}
+::view-transition-new(root) {
+  animation: kf-fade-up-in 0.38s var(--kf-ease) both;
+}
+
+/* --------------------------------------------------------------------------
+   4. Header — soft shadow once scrolled; hides on scroll down, returns on scroll up
+   -------------------------------------------------------------------------- */
+#site-header {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.35s var(--kf-ease);
+  will-change: transform;
+}
+#site-header.is-scrolled {
+  box-shadow: 0 6px 24px rgba(6, 28, 0, 0.07);
+}
+#site-header.is-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+/* sticky panels (basket summary, "On this page") move up when the header hides */
+.sticky.top-24,
+.lg\:top-24 {
+  transition: top 0.35s var(--kf-ease);
+}
+html.kf-header-hidden .sticky.top-24 {
+  top: 1.5rem;
+}
+@media (min-width: 1024px) {
+  html.kf-header-hidden .lg\:top-24 {
+    top: 1.5rem;
+  }
+}
+
+/* Desktop dropdowns: fade + slide instead of popping */
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s var(--kf-ease), transform 0.2s var(--kf-ease), visibility 0s linear 0.2s;
+}
+.group:hover > .nav-dropdown,
+.group:focus-within > .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.2s var(--kf-ease), transform 0.2s var(--kf-ease), visibility 0s;
+}
+
+/* Login state (set on <html> by the header boot script) */
+html[data-auth='in'] [data-auth-out],
+html:not([data-auth='in']) [data-auth-in] {
+  display: none !important;
+}
+
+/* Close the language dropdown right after a choice, even while still hovered */
+.group[data-closing] > .nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+}
+
+/* Mobile menu */
+#mobile-menu:not(.hidden) {
+  animation: kf-slide-down 0.28s var(--kf-ease) both;
+}
+#mobile-menu details > div a {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   5. Accordions (<details>) open and close smoothly
+   -------------------------------------------------------------------------- */
+details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.3s var(--kf-ease), content-visibility 0.3s allow-discrete;
+}
+details[open]::details-content {
+  block-size: auto;
+}
+
+/* --------------------------------------------------------------------------
+   6. Modal + toasts
+   -------------------------------------------------------------------------- */
+#knowledge-sheet-modal:not(.hidden) {
+  animation: kf-fade-in 0.2s ease both;
+}
+#knowledge-sheet-modal:not(.hidden) > div {
+  animation: kf-pop-in 0.28s var(--kf-ease) both;
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#basket-toast:not(.hidden) {
+  animation: kf-toast-in 0.3s var(--kf-ease) both;
+}
+
+/* --------------------------------------------------------------------------
+   7. Scroll reveal (classes are added by main.js, so no-JS visitors see everything)
+   -------------------------------------------------------------------------- */
+.kf-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.kf-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s var(--kf-ease), transform 0.7s var(--kf-ease);
+  transition-delay: var(--kf-delay, 0ms);
+}
+
+/* --------------------------------------------------------------------------
+   Home hero
+   -------------------------------------------------------------------------- */
+/* Hero fills the screen below the header — never taller than needed on short
+   laptop screens (e.g. 1920×1080 at 150% Windows scaling ≈ 1280×550 in the browser),
+   never a giant wall on tall monitors. Content can always grow it. */
+.kf-hero {
+  min-height: min(860px, calc(100svh - var(--kf-header-h)));
+}
+@media (max-width: 767.98px) {
+  .kf-hero {
+    min-height: min(760px, calc(100svh - var(--kf-header-h)));
+  }
+}
+/* Short screens: tighten the hero so tagline → buttons fit in one view */
+@media (min-width: 768px) and (max-height: 860px) {
+  .kf-hero-inner {
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .kf-hero-stack {
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-height: 720px) {
+  .kf-hero-inner {
+    padding-top: 1.75rem;
+    padding-bottom: 2.75rem;
+  }
+  .kf-hero-stack {
+    gap: 0.75rem;
+  }
+  .kf-hero h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+  .kf-hero .text-body-lg {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 768px) and (max-height: 600px) {
+  .kf-hero h1 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .kf-hero-cue {
+    display: none !important;
+  }
+}
+
+/* Small phones (e.g. 375×667): keep tagline → buttons on the first screen */
+@media (max-width: 767.98px) and (max-height: 760px) {
+  .kf-hero-inner {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .kf-hero-stack {
+    gap: 0.75rem;
+  }
+  #view-home .kf-hero h1 {
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+  .kf-hero .text-body-lg {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .kf-hero .text-caption-bracketed {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+/* very slow zoom-out on the background photo */
+.kf-hero-bg {
+  transform: scale(1.08);
+  animation: kf-hero-zoom 14s var(--kf-ease) forwards;
+}
+/* hero text arrives one line after another */
+.kf-hero-in {
+  animation: kf-fade-up-in 0.8s var(--kf-ease) both;
+  animation-delay: var(--kf-in, 0ms);
+}
+/* scroll cue gently bobs */
+.kf-scroll-cue {
+  animation: kf-bob 2.2s ease-in-out infinite;
+}
+
+/* "See Our Products": gold fills in from the left, arrow slides right and turns dark */
+.kf-btn-sweep::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #f7c75d;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s var(--kf-ease);
+}
+.kf-btn-sweep:hover::before,
+.kf-btn-sweep:focus-visible::before {
+  transform: scaleX(1);
+}
+.kf-btn-sweep-icon {
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.45s var(--kf-ease);
+}
+.kf-btn-sweep:hover .kf-btn-sweep-icon,
+.kf-btn-sweep:focus-visible .kf-btn-sweep-icon {
+  background-color: #061c00;
+  color: #f7c75d;
+  transform: translateX(4px);
+}
+
+/* "Visit the Farm": ivory fills in from the left, text turns forest green,
+   compass icon spins once and turns leaf green */
+.kf-btn-visit {
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+.kf-btn-visit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #fbf8ef;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s var(--kf-ease);
+}
+.kf-btn-visit:hover,
+.kf-btn-visit:focus-visible {
+  color: #061c00;
+  border-color: #fbf8ef;
+}
+.kf-btn-visit:hover::before,
+.kf-btn-visit:focus-visible::before {
+  transform: scaleX(1);
+}
+.kf-btn-visit-icon {
+  transition: transform 0.7s var(--kf-ease), color 0.4s ease;
+}
+.kf-btn-visit:hover .kf-btn-visit-icon,
+.kf-btn-visit:focus-visible .kf-btn-visit-icon {
+  transform: rotate(360deg);
+  color: #47710a;
+}
+
+/* Footer "Subscribe": ivory sweeps in from the left, the button lifts with a gold
+   glow, and a paper-plane icon slides in and takes off */
+.kf-btn-subscribe {
+  transition: transform 0.35s var(--kf-ease), box-shadow 0.35s var(--kf-ease), padding 0.35s var(--kf-ease);
+}
+.kf-btn-subscribe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #fbf8ef;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s var(--kf-ease);
+}
+.kf-sub-icon {
+  width: 0;
+  margin-left: -0.5rem; /* cancels the flex gap while hidden */
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: width 0.35s var(--kf-ease), margin 0.35s var(--kf-ease), opacity 0.3s ease, transform 0.35s var(--kf-ease);
+}
+@media (hover: hover) {
+  .kf-btn-subscribe:hover,
+  .kf-btn-subscribe:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(247, 199, 93, 0.35), 0 0 0 3px rgba(247, 199, 93, 0.25);
+  }
+  .kf-btn-subscribe:hover::before,
+  .kf-btn-subscribe:focus-visible::before {
+    transform: scaleX(1);
+  }
+  .kf-btn-subscribe:hover .kf-sub-icon,
+  .kf-btn-subscribe:focus-visible .kf-sub-icon {
+    width: 18px;
+    margin-left: 0;
+    opacity: 1;
+    transform: none;
+    animation: kf-send 1.2s var(--kf-ease) 0.35s infinite;
+  }
+}
+.kf-btn-subscribe:active {
+  transform: translateY(0) scale(0.97);
+}
+/* after a successful sign-up (set by main.js) */
+.kf-btn-subscribe.is-done {
+  background: #47710a;
+  color: #fbf8ef;
+}
+.kf-btn-subscribe.is-done::before {
+  transform: scaleX(0);
+}
+
+@keyframes kf-send {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  45% {
+    transform: translate(3px, -3px) rotate(-18deg);
+  }
+}
+
+@keyframes kf-hero-zoom {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes kf-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+/* Home "Discover" photo tiles: on mouse/trackpad screens only the photo and
+   label show; hovering blurs the photo and slides in the text + Explore button.
+   Touch screens (no hover) always show everything. */
+@media (hover: hover) {
+  .kf-tile img {
+    transition: transform 0.7s var(--kf-ease), filter 0.4s ease;
+  }
+  .kf-tile-blur {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .kf-tile-reveal {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: grid-template-rows 0.4s var(--kf-ease), opacity 0.3s ease, transform 0.4s var(--kf-ease);
+  }
+  .kf-tile-reveal > div {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .kf-tile:hover .kf-tile-blur,
+  .kf-tile:focus-visible .kf-tile-blur {
+    opacity: 1;
+  }
+  .kf-tile:hover .kf-tile-reveal,
+  .kf-tile:focus-visible .kf-tile-reveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (hover: none) {
+  .kf-tile-blur {
+    display: none;
+  }
+}
+
+/* Swipe rows on phones (home harvest + discover): hide the scrollbar */
+.kf-scroller {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.kf-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Touch screens: small links get a larger invisible tap area (added by main.js) */
+.kf-tap {
+  position: relative;
+}
+.kf-tap::after {
+  content: '';
+  position: absolute;
+  inset: -10px -6px;
+}
+
+/* Subtle lift on the cards that already change border colour on hover */
+@media (hover: hover) {
+  .kf-card {
+    transition: transform 0.3s var(--kf-ease), box-shadow 0.3s var(--kf-ease), border-color 0.2s ease;
+  }
+  .kf-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(6, 28, 0, 0.08);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes kf-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes kf-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes kf-fade-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@keyframes kf-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes kf-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+@keyframes kf-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 16px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Reduced motion — keep everything, drop the movement
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .kf-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  @view-transition {
+    navigation: none;
+  }
+}

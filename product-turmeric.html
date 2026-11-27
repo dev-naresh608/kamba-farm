@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("kf-preload");
+      // skipped page transitions reject their promises; mark them handled (keeps the console clean)
+      ["pagereveal", "pageswap"].forEach(function (type) {
+        window.addEventListener(type, function (e) {
+          var vt = e.viewTransition;
+          if (vt)
+            ["ready", "finished", "updateCallbackDone"].forEach(function (k) {
+              if (vt[k]) vt[k].catch(function () {});
+            });
+        });
+      });
+    </script>
+    <title>Artisanal Turmeric Powder · Aubingo @Kambafarm</title>
+    <meta name="description" content="High-curcumin heirloom turmeric, sun-cured and stone-milled at Kambafarm." />
+    <meta name="theme-color" content="#FBF8EF" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mukta:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
+    />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"
+    data-page="view-product-turmeric"
+  >
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="sticky top-0 z-40 w-full bg-surface border-b border-line" id="site-header">
+      <div
+        class="h-16 lg:h-20 max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between gap-gutter"
+      >
+        <!-- Logo: width/height reserve its space before the image arrives -->
+        <a
+          class="shrink-0 flex items-center transition-transform active:scale-[0.99]"
+          href="index.html"
+          aria-label="Aubingo @Kambafarm home"
+        >
+          <img
+            class="h-[42px] lg:h-[56px] w-auto object-contain"
+            src="assets/img/kambafarm-logo.webp"
+            alt="Kambafarm logo"
+            width="591"
+            height="200"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </a>
+
+        <!-- Desktop menu (1280px and wider) -->
+        <nav class="hidden xl:flex items-center gap-space-lg" aria-label="Main navigation">
+          <div class="relative group" data-nav-group="discover">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Discover<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-56 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-story.html"
+                  >Our story</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="the-farm.html"
+                  >The farm</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-team.html"
+                  >Our team</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="our-animals.html"
+                  >Our animals</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="how-we-farm.html"
+                  >How we farm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="shop">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Aubingo Shop<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-60 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=harvest"
+                  >This week's harvest</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=kitchen"
+                  >From our kitchen</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="shop.html?cat=seeds"
+                  >Seeds and saplings</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="special-enquiries.html"
+                  >Special enquiries</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="visit">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Visit Kambafarm<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-64 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="saturday-farm-tour.html"
+                  >Saturday farm tour</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="kambafarm-weekend.html"
+                  >Kambafarm Weekend</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="practical-information.html"
+                  >Practical information</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-nav-group="news">
+            <button
+              class="flex items-center gap-space-xs whitespace-nowrap font-label text-label text-primary-container hover:text-secondary transition-colors py-2"
+              type="button"
+              aria-haspopup="true"
+              data-nav-trigger
+            >
+              Kambafarm News<span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute top-full left-0 pt-2 w-64 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-space-sm shadow-[0_8px_24px_rgba(10,32,2,0.08)] flex flex-col gap-1"
+              >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="farm-stories.html"
+                  >Farm stories</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="product-knowledge-sheets.html"
+                  >Product knowledge sheets</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Language, basket, account, mobile menu button -->
+        <div class="shrink-0 flex items-center gap-space-sm md:gap-space-md">
+          <div class="relative group hidden sm:block" data-lang-switcher>
+            <button
+              class="h-11 min-w-[92px] px-space-md rounded-full border border-line bg-surface hover:bg-pale-leaf transition-colors flex items-center justify-center gap-space-xs font-label-sm text-label-sm text-primary-container"
+              type="button"
+              aria-haspopup="true"
+              aria-label="Choose language"
+            >
+              <span class="material-symbols-outlined text-small text-outline" aria-hidden="true">language</span
+              ><span data-lang-current>EN</span
+              ><span
+                class="material-symbols-outlined text-small text-outline transition-transform duration-200 group-hover:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="nav-dropdown absolute right-0 top-full pt-2 w-36 z-50">
+              <div
+                class="bg-surface border border-line rounded-lg p-1 shadow-[0_4px_16px_rgba(0,0,0,0.06)] flex flex-col"
+                role="menu"
+                aria-label="Language"
+              >
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-label-sm text-label-sm text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="en"
+                >
+                  EN
+                </button>
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-deva-label text-deva-label text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="hi"
+                >
+                  हिं (Hindi)
+                </button>
+                <button
+                  class="text-left px-space-md py-1.5 rounded hover:bg-pale-leaf hover:text-leaf-dark font-deva-label text-deva-label text-on-surface"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="mr"
+                >
+                  मरा (Marathi)
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Basket: icon only, item count in a badge on the top-right -->
+          <a
+            class="relative w-11 h-11 rounded-full border-[1.5px] border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center shrink-0"
+            href="basket.html"
+            aria-label="Basket, 0 items"
+            data-basket-link
+          >
+            <span class="material-symbols-outlined text-[22px]" aria-hidden="true">shopping_basket</span>
+            <span
+              class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-[#7D202B] text-[#FBF8EF] text-[11px] leading-5 font-bold text-center tabular-nums ring-2 ring-surface pointer-events-none"
+              aria-hidden="true"
+              data-basket-count
+              >0</span
+            >
+          </a>
+          <a
+            class="hidden sm:inline-flex h-10 px-5 rounded-full bg-[#061C00] hover:bg-[#47710A] text-[#FBF8EF] items-center gap-1.5 font-label text-label whitespace-nowrap shrink-0 transition-colors"
+            href="login.html"
+            data-auth-out
+            ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">login</span>Login</a
+          >
+          <a
+            class="hidden sm:flex w-9 h-9 rounded-full bg-primary hover:bg-[#47710A] text-on-primary items-center justify-center shrink-0 transition-colors"
+            href="profile.html"
+            aria-label="My profile"
+            title="My profile"
+            data-profile-link
+            data-auth-in
+          >
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-profile-avatar-icon>person</span
+            ><span
+              class="hidden font-label-sm text-[12px] font-bold tracking-wide text-[#F7C75D]"
+              data-profile-avatar-text
+            ></span>
+          </a>
+          <button
+            class="xl:hidden w-11 h-11 rounded-full border border-line bg-surface hover:bg-pale-leaf transition-colors flex items-center justify-center text-primary-container shrink-0"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-toggle
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile / tablet menu (below 1280px) -->
+      <div
+        class="xl:hidden hidden border-t border-line bg-surface max-h-[calc(100dvh-4rem)] lg:max-h-[calc(100dvh-5rem)] overflow-y-auto"
+        id="mobile-menu"
+      >
+        <nav
+          class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-sm flex flex-col divide-y divide-line"
+          aria-label="Mobile navigation"
+        >
+          <details class="group" data-nav-group="discover">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Discover<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-story.html"
+                >Our story</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="the-farm.html"
+                >The farm</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-team.html"
+                >Our team</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="our-animals.html"
+                >Our animals</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="how-we-farm.html"
+                >How we farm</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="shop">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Aubingo Shop<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=harvest"
+                >This week's harvest</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=kitchen"
+                >From our kitchen</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="shop.html?cat=seeds"
+                >Seeds and saplings</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="special-enquiries.html"
+                >Special enquiries</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="visit">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Visit Kambafarm<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="saturday-farm-tour.html"
+                >Saturday farm tour</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="kambafarm-weekend.html"
+                >Kambafarm Weekend</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="practical-information.html"
+                >Practical information</a
+              >
+            </div>
+          </details>
+
+          <details class="group" data-nav-group="news">
+            <summary
+              class="flex items-center justify-between py-3 font-label text-label text-primary-container cursor-pointer list-none"
+              data-nav-trigger
+            >
+              Kambafarm News<span
+                class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+                >keyboard_arrow_down</span
+              >
+            </summary>
+            <div class="flex flex-col gap-1 pb-3">
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="farm-stories.html"
+                >Farm stories</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="product-knowledge-sheets.html"
+                >Product knowledge sheets</a
+              >
+            </div>
+          </details>
+          <a
+            class="flex items-center gap-3 py-3 font-label text-label text-primary-container hover:text-secondary"
+            href="profile.html"
+            data-auth-in
+          >
+            <span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0"
+              ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">person</span></span
+            >My profile
+          </a>
+          <a
+            class="flex items-center gap-3 py-3 font-label text-label text-primary-container hover:text-secondary"
+            href="login.html"
+            data-auth-out
+          >
+            <span class="w-8 h-8 rounded-full bg-[#061C00] text-[#FBF8EF] flex items-center justify-center shrink-0"
+              ><span class="material-symbols-outlined text-[18px]" aria-hidden="true">login</span></span
+            >Login / Sign up
+          </a>
+          <div class="flex flex-wrap items-center gap-space-sm py-4" role="menu" aria-label="Language">
+            <span class="material-symbols-outlined text-small text-outline" aria-hidden="true">language</span>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-label-sm text-label-sm text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="EN"
+              data-lang="en"
+              data-lang-pill
+            >
+              EN
+            </button>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-deva-label text-deva-label text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="हिं (Hindi)"
+              data-lang="hi"
+              data-lang-pill
+            >
+              हिं
+            </button>
+            <button
+              class="px-space-md py-1.5 rounded-full border border-line hover:bg-pale-leaf font-deva-label text-deva-label text-on-surface"
+              type="button"
+              role="menuitemradio"
+              aria-checked="false"
+              aria-label="मरा (Marathi)"
+              data-lang="mr"
+              data-lang-pill
+            >
+              मरा
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script data-header-boot>
+      /*
+       * Header boot — runs inline right after </header> on every page, before the
+       * first paint, so the header never jumps or flashes on load:
+       *   - shows the saved language (EN / हिं / मरा)
+       *   - shows the saved basket count
+       *   - highlights the menu section of the current page
+       * This file is the source of the inline "header boot" script in each page.
+       * Click handling lives in main.js.
+       */
+      (function () {
+        var doc = document;
+        var root = doc.documentElement;
+        var LANGS = { en: "EN", hi: "हिं", mr: "मरा" };
+
+        function read(key) {
+          try {
+            return window.localStorage.getItem(key);
+          } catch (e) {
+            return null;
+          }
+        }
+
+        window.kfApplyLanguage = function (lang) {
+          if (!LANGS[lang]) lang = "en";
+          var deva = lang !== "en";
+          root.setAttribute("lang", lang);
+          root.setAttribute("data-site-lang", lang);
+          doc.querySelectorAll("[data-lang-current]").forEach(function (el) {
+            el.textContent = LANGS[lang];
+            el.classList.toggle("font-deva-label", deva);
+            el.classList.toggle("text-deva-label", deva);
+          });
+          doc.querySelectorAll("button[data-lang]").forEach(function (btn) {
+            var on = btn.getAttribute("data-lang") === lang;
+            btn.setAttribute("aria-checked", String(on));
+            btn.classList.toggle("text-secondary", on);
+            btn.classList.toggle("font-bold", on);
+            btn.classList.toggle("text-on-surface", !on);
+            if (btn.hasAttribute("data-lang-pill")) btn.classList.toggle("bg-pale-leaf", on);
+          });
+          return lang;
+        };
+        window.kfApplyLanguage(read("kambafarm.lang") || "en");
+
+        // Badge shows how many DIFFERENT products are in the basket (6 jars of one item = 1)
+        var count = 0;
+        try {
+          var saved = JSON.parse(read("kambafarm.basket.v1"));
+          count = Array.isArray(saved) ? saved.length : 0;
+        } catch (e) {
+          /* empty basket */
+        }
+        // Basket icon badge: hidden when empty, "99+" cap so it stays round
+        window.kfShowBasketCount = function (n) {
+          doc.querySelectorAll("[data-basket-count]").forEach(function (el) {
+            el.textContent = n > 99 ? "99+" : String(n);
+            el.classList.toggle("hidden", n < 1);
+          });
+          doc.querySelectorAll("[data-basket-link]").forEach(function (el) {
+            el.setAttribute("aria-label", "Basket, " + n + (n === 1 ? " product" : " products"));
+          });
+        };
+        window.kfShowBasketCount(count);
+
+        // Logged in or not (demo login, stored in this browser): CSS shows the Login
+        // button or the profile icon from <html data-auth="in|out">
+        var session = null;
+        try {
+          session = JSON.parse(read("kambafarm.session.v1"));
+        } catch (e) {
+          session = null;
+        }
+        root.setAttribute("data-auth", session && session.email ? "in" : "out");
+
+        // Profile avatar: show the visitor's initials once they have saved a name
+        window.kfShowProfileAvatar = function (name) {
+          var initials = String(name || "")
+            .trim()
+            .split(/\s+/)
+            .filter(Boolean)
+            .slice(0, 2)
+            .map(function (w) {
+              return w.charAt(0);
+            })
+            .join("")
+            .toUpperCase();
+          doc.querySelectorAll("[data-profile-avatar-text]").forEach(function (el) {
+            el.textContent = initials;
+            el.classList.toggle("hidden", !initials);
+          });
+          doc.querySelectorAll("[data-profile-avatar-icon]").forEach(function (el) {
+            el.classList.toggle("hidden", !!initials);
+          });
+        };
+        try {
+          window.kfShowProfileAvatar((JSON.parse(read("kambafarm.profile.v1")) || {}).name);
+        } catch (e) {
+          /* no profile yet */
+        }
+
+        var SECTION = {
+          "our-story.html": "discover",
+          "the-farm.html": "discover",
+          "our-team.html": "discover",
+          "our-animals.html": "discover",
+          "how-we-farm.html": "discover",
+          "shop.html": "shop",
+          "product-turmeric.html": "shop",
+          "special-enquiries.html": "shop",
+          "saturday-farm-tour.html": "visit",
+          "kambafarm-weekend.html": "visit",
+          "practical-information.html": "visit",
+          "product-knowledge-sheets.html": "news",
+          "farm-stories.html": "news",
+        };
+        var file = window.location.pathname.split("/").pop() || "index.html";
+        if (file.indexOf("story-") === 0) SECTION[file] = "news"; // single blog posts
+        var here = file + window.location.search;
+
+        doc.querySelectorAll("#site-header [data-nav-group]").forEach(function (group) {
+          var active = SECTION[file] === group.getAttribute("data-nav-group");
+          var trigger = group.querySelector("[data-nav-trigger]");
+          if (active && trigger) {
+            trigger.classList.remove("text-primary-container");
+            trigger.classList.add("text-secondary");
+            if (group.tagName === "DETAILS") group.open = true;
+          }
+          group.querySelectorAll("a[href]").forEach(function (a) {
+            if (a.getAttribute("href") !== here) return;
+            a.classList.remove("text-on-surface");
+            a.classList.add("bg-pale-leaf", "text-leaf-dark");
+            a.setAttribute("aria-current", "page");
+          });
+        });
+      })();
+    </script>
+    <main class="flex-1 w-full bg-surface" id="main-content">
+      <div class="flex flex-col w-full text-on-surface">
+        <section class="flex flex-col w-full" id="view-product-turmeric">
+          <div class="w-full bg-surface py-space-md border-b border-line">
+            <div
+              class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center gap-2 text-ink-muted font-label-sm text-label-sm"
+            >
+              <a href="index.html" class="hover:text-primary">Home</a>
+              <span>/</span>
+              <a href="shop.html?cat=harvest" class="hover:text-primary">Aubingo Shop</a>
+              <span>/</span>
+              <span class="text-secondary font-medium">Artisanal Turmeric Powder</span>
+            </div>
+          </div>
+          <div class="w-full bg-surface py-space-xl">
+            <div
+              class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter"
+            >
+              <!-- Image Gallery (Interactive) -->
+              <div class="lg:col-span-7 flex flex-col gap-space-md">
+                <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-pale-leaf border border-line">
+                  <img
+                    class="w-full h-full object-cover transition-opacity duration-300"
+                    alt="Artisanal bright orange-yellow turmeric powder in a handmade ceramic bowl with fresh cut aromatic rhizomes in soft morning light."
+                    id="product-main-image"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPMTvQ0kf-5AOzrYv81uXnEgihzTaS6NkH364RfGagUegtHV7SziGCwqgfWEH2wZzhv_CwvjmVX_ksq4nYseUELGaDBFZ6MR2cdo7pVa-2MdMKzcW1-HgCQFTT4zpvyCtThEcazUohV0cuE_gMb4fMvPSXI2e3yYDwCqK-MLqLWHb6LILjZhdfat9FWRp1xGvqncVfj4eGMtf7yI-wEUQAltydu_fHXekOvr6XvSG"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-[#F7C75D] text-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm font-bold shadow-sm"
+                    >Aubingo Kitchen</span
+                  >
+                </div>
+                <div class="grid grid-cols-3 gap-space-sm">
+                  <button
+                    class="thumb-btn rounded-lg overflow-hidden aspect-square border border-line"
+                    onclick="changeProductThumb(0)"
+                    type="button"
+                  >
+                    <img
+                      loading="lazy"
+                      class="w-full h-full object-cover"
+                      alt="Stoneground artisanal yellow turmeric powder in small terracotta bowl."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYVJT1LCi50-VhMBYVZ6r1RoCkBs0pLr-PHr9ZY0qFd07A6YENQF1mUxMBEw3pG9dBuK-hPl4xdSKjt3EYx9XIB248abc-w8VgAoNTnmAxL-xwSJejVqssJKbTsE4cwssLzsIOvdE130w3NM22k_7TURJRVTGMxAVFYQzcblA2m6WmwhrOQLcNRqiVuwxwq_0zJ7PUsLMk6vxxk-ys3upHhyjPvDpLAY59bG2OeIZ0"
+                    /></button
+                  ><button
+                    class="thumb-btn rounded-lg overflow-hidden aspect-square border border-2 border-secondary"
+                    onclick="changeProductThumb(1)"
+                    type="button"
+                  >
+                    <img
+                      loading="lazy"
+                      class="w-full h-full object-cover"
+                      alt="Turmeric plants growing in the shade between the tree rows at Kambafarm"
+                      src="assets/img/farm/turmeric-plants-in-shade.jpg"
+                    /></button
+                  ><button
+                    class="thumb-btn rounded-lg overflow-hidden aspect-square border border-line"
+                    onclick="changeProductThumb(2)"
+                    type="button"
+                  >
+                    <img
+                      loading="lazy"
+                      class="w-full h-full object-cover"
+                      alt="Traditional wood and stone milling of turmeric root at Kambafarm outdoor shed."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVtjD0hiD2g1JHMNAYiIALIHAfei9kCun06qmIIInzkT28o4V5Y_DtrLVqP2kl6cRWv9ZcI-MQXo8R9Dm_Ko9i0srbyEEsvE2yvjcsuQ_OcmzvgCUOglABr9Ot85INGelYxPuORU2l9ag3Rgn9OzNSEz7DuuyBG6f0VNkG7glh8QL1JNTh-cgtLqTQI78-9UmBk_QJKBDpmukv6uP07VY8zdqf4wn9dSJZl2f0eIzS"
+                    />
+                  </button>
+                </div>
+              </div>
+              <!-- Purchase & Details Panel -->
+              <div
+                class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-low p-space-lg lg:p-space-xl rounded-xl border border-line h-fit"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider"
+                    >Kambafarm Grown&nbsp;</span
+                  >
+                  <span class="px-2.5 py-0.5 rounded-full bg-pale-leaf text-secondary font-label-sm text-label-sm"
+                    >In Stock</span
+                  >
+                </div>
+                <h1 class="font-h1 text-h1 text-primary-container leading-tight">Artisanal Turmeric Powder</h1>
+                <p class="font-body text-body text-ink-muted">
+                  Grown between our tree rows in filtered shade, left in the soil for two years and processed by hand at
+                  the farm into a fragrant powder with a full, distinctive taste.
+                </p>
+                <div class="flex items-baseline gap-space-sm pt-space-xs">
+                  <span class="font-hero-title text-hero-title text-primary-container" id="product-price">₹240</span>
+                  <span class="font-small text-small text-ink-muted">including all taxes</span>
+                </div>
+                <!-- Pack Size Selector -->
+                <div class="flex flex-col gap-space-xs pt-space-xs">
+                  <span class="font-label text-label text-primary-container">Select Pack Size</span>
+                  <div class="grid grid-cols-2 gap-space-sm">
+                    <button
+                      class="pack-btn py-2 px-space-md rounded-lg border-2 border-secondary bg-surface text-secondary font-label-sm text-label-sm text-center"
+                      onclick="selectPackSize(250, 240, this)"
+                    >
+                      <span class="block font-bold">250g Jar</span>
+                      <span class="text-xs text-ink-muted">₹240 (₹0.96/g)</span>
+                    </button>
+                    <button
+                      class="pack-btn py-2 px-space-md rounded-lg border border-line bg-surface text-ink-muted font-label-sm text-label-sm text-center"
+                      onclick="selectPackSize(500, 440, this)"
+                    >
+                      <span class="block font-bold">500g Jar</span>
+                      <span class="text-xs text-ink-muted">₹440 (Save ₹40)</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- Quantity Stepper & Add Button -->
+                <div class="flex items-center gap-space-sm pt-space-sm">
+                  <div class="flex items-center border border-line-strong rounded-full bg-surface h-12 px-2">
+                    <button
+                      class="w-8 h-8 rounded-full flex items-center justify-center text-primary-container hover:bg-pale-leaf"
+                      onclick="adjustProductQty(-1)"
+                    >
+                      <span class="material-symbols-outlined text-small">remove</span>
+                    </button>
+                    <span class="w-8 text-center font-label text-label" id="product-qty-display">1</span>
+                    <button
+                      class="w-8 h-8 rounded-full flex items-center justify-center text-primary-container hover:bg-pale-leaf"
+                      onclick="adjustProductQty(1)"
+                    >
+                      <span class="material-symbols-outlined text-small">add</span>
+                    </button>
+                  </div>
+                  <button
+                    class="flex-1 h-12 rounded-full bg-primary-container hover:bg-forest-hover text-surface font-label text-label transition-colors flex items-center justify-center gap-space-xs shadow-sm"
+                    onclick="addSelectedProductToBasket()"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">shopping_basket</span>
+                    <span>Add to basket</span>
+                  </button>
+                </div>
+                <!-- Technical Sheet Modal Trigger -->
+                <button
+                  class="w-full py-2.5 rounded-lg border border-line bg-surface hover:bg-pale-leaf text-secondary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-space-xs"
+                  onclick="openKnowledgeModal()"
+                >
+                  <span class="material-symbols-outlined text-[18px]">description</span>
+                  <span>View Technical Product Sheet (A4 PDF)</span>
+                </button>
+                <!-- Accordions -->
+                <div class="flex flex-col border-t border-line pt-space-md space-y-2">
+                  <details class="group bg-surface rounded-lg p-space-sm cursor-pointer">
+                    <summary
+                      class="font-label text-label text-primary-container flex justify-between items-center list-none"
+                    >
+                      <span>The Story &amp; Origin</span>
+                      <span class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="font-small text-small text-ink-muted pt-2 leading-relaxed">
+                      Turmeric is one of our main crops. We grow several varieties between our tree rows, in the
+                      filtered light beneath the trees: it is a tropical understory plant and does not need full sun. We
+                      leave it in the soil for two years so the fingers grow larger and mature fully, then process it
+                      here at the farm, by hand and with great care, from the fresh rhizome to the finished powder.
+                    </p>
+                  </details>
+                  <details class="group bg-surface rounded-lg p-space-sm cursor-pointer">
+                    <summary
+                      class="font-label text-label text-primary-container flex justify-between items-center list-none"
+                    >
+                      <span>Storage &amp; Shelf Life</span>
+                      <span class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="font-small text-small text-ink-muted pt-2 leading-relaxed">
+                      Best consumed within 12 months. Store in airtight glass container away from direct sunlight. Do
+                      not introduce wet spoons.
+                    </p>
+                  </details>
+                  <details class="group bg-surface rounded-lg p-space-sm cursor-pointer" open="">
+                    <summary
+                      class="font-label text-label text-primary-container flex justify-between items-center list-none"
+                    >
+                      <span>Culinary &amp; FSSAI Details</span>
+                      <span class="material-symbols-outlined text-ink-muted group-open:rotate-180 transition-transform"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="font-small text-small text-ink-muted pt-2 leading-relaxed">
+                      <img src="assets/img/farm/fssai-logo.jpg" alt="FSSAI" class="inline-block h-6 w-auto align-middle mr-2 rounded-sm" loading="lazy" />FSSAI Lic. No.: to be added. Ideal for warm golden milk (haldi doodh), curries, marinades, or
+                      slow-cooked broths.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      id="site-footer"
+      class="w-full bg-[#061C00] text-[#FBF8EF] pt-space-xl pb-space-lg border-t border-[#47710A]/20 relative"
+    >
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg lg:gap-16 lg:items-end pb-space-xl mb-space-xl border-b border-[#FBF8EF]/10"
+        >
+          <div>
+            <h3 class="font-h2 text-[26px] leading-[34px] md:text-[28px] md:leading-[36px] text-[#FBF8EF]">
+              Farm news by email
+            </h3>
+            <p class="mt-2 font-body text-body text-[#EFF2E4]/80 max-w-lg">
+              Receive quiet updates on seasonal yields, sapling distributions, and Saturday gathering schedules.
+            </p>
+          </div>
+          <div>
+            <form class="flex flex-col sm:flex-row gap-space-sm" data-newsletter-form>
+              <input
+                class="h-12 w-full sm:w-auto sm:flex-1 min-w-0 px-5 rounded-full bg-[#FBF8EF] text-[#061C00] placeholder:text-ink-muted border border-transparent focus:outline-none focus:ring-2 focus:ring-[#F7C75D]"
+                placeholder="Your email address"
+                type="email"
+                required
+                aria-label="Your email address"
+              />
+              <button
+                class="kf-btn-subscribe relative isolate overflow-hidden h-12 px-7 rounded-full bg-[#F7C75D] text-[#061C00] font-label text-label font-bold whitespace-nowrap flex items-center justify-center gap-2"
+                type="submit"
+              >
+                <span class="kf-sub-text">Subscribe</span
+                ><span class="kf-sub-icon material-symbols-outlined text-[18px]" aria-hidden="true">send</span>
+              </button>
+            </form>
+            <label class="mt-3 flex items-start gap-2 font-small text-small text-[#EFF2E4]/75 cursor-pointer"
+              ><input class="mt-0.5 w-4 h-4 rounded accent-[#F7C75D] shrink-0" type="checkbox" /><span
+                >I consent to receiving seasonal agricultural updates. No spam or promotions.</span
+              ></label
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-gutter mb-space-xl">
+          <div class="lg:col-span-2 space-y-space-md">
+            <div class="bg-[#FBF8EF] rounded-xl px-3 py-2 inline-block">
+              <img
+                loading="lazy"
+                alt="Kambafarm logo"
+                class="h-8 lg:h-10 w-auto object-contain"
+                src="assets/img/kambafarm-logo.webp"
+                width="591"
+                height="200"
+              />
+            </div>
+            <p class="font-small text-small text-surface-container max-w-sm leading-relaxed">
+              A Greencert-certified organic agroforestry farm 50 km outside Pune, close to Nasrapur, run together with
+              Aubingo Farmer Producer Company, owned by our farm team.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Discover</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li><a href="our-story.html" class="hover:text-surface transition-colors">Our story</a></li>
+              <li><a href="the-farm.html" class="hover:text-surface transition-colors">The farm</a></li>
+              <li><a href="our-team.html" class="hover:text-surface transition-colors">Our team</a></li>
+              <li><a href="our-animals.html" class="hover:text-surface transition-colors">Our animals</a></li>
+              <li><a href="how-we-farm.html" class="hover:text-surface transition-colors">How we farm</a></li>
+              <li>
+                <a href="practical-information.html#tab-certification" class="hover:text-surface transition-colors"
+                  >Certification &amp; standards</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Aubingo Shop</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li>
+                <a href="shop.html?cat=harvest" class="hover:text-surface transition-colors">This week's harvest</a>
+              </li>
+              <li><a href="shop.html?cat=kitchen" class="hover:text-surface transition-colors">From our kitchen</a></li>
+              <li><a href="shop.html?cat=seeds" class="hover:text-surface transition-colors">Seeds and saplings</a></li>
+              <li>
+                <a href="special-enquiries.html" class="hover:text-surface transition-colors">Special enquiries</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Visit &amp; Stay</h4>
+            <ul class="space-y-space-xs font-small text-small text-surface-container-high">
+              <li>
+                <a href="saturday-farm-tour.html" class="hover:text-surface transition-colors">Saturday farm tour</a>
+              </li>
+              <li>
+                <a href="kambafarm-weekend.html" class="hover:text-surface transition-colors">Kambafarm Weekend</a>
+              </li>
+              <li>
+                <a href="practical-information.html" class="hover:text-surface transition-colors">Practical info</a>
+              </li>
+              <li>
+                <a href="farm-stories.html" class="hover:text-surface transition-colors">Farm stories</a>
+              </li>
+              <li>
+                <a href="product-knowledge-sheets.html" class="hover:text-surface transition-colors">Kitchen recipes</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label text-label text-[#F7C75D] mb-space-md tracking-wider uppercase">Contact</h4>
+            <div class="space-y-space-xs font-small text-small text-surface-container-high">
+              <p>Near Nasrapur, Pune</p>
+              <p class="pt-1 font-label text-label text-surface break-words">connect@kambafarm.in</p>
+              <p>+91 98230 00000</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg border-t border-[#FBF8EF]/10 flex flex-col md:flex-row items-center justify-between gap-space-md font-small text-small text-surface-container"
+        >
+          <p>© 2026 Aubingo @Kambafarm. Grown near Nasrapur, Pune.</p>
+          <div class="flex flex-wrap items-center gap-space-md">
+            <a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Terms</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Privacy</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors">Refunds</a
+            ><a href="practical-information.html#tab-policies" class="hover:text-surface transition-colors"
+              >Cookie settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-30" id="whatsapp-float">
+      <a
+        aria-label="Chat on WhatsApp"
+        title="Chat on WhatsApp"
+        class="w-14 h-14 rounded-full bg-[#47710A] hover:bg-[#061C00] text-[#FBF8EF] flex items-center justify-center shadow-[0_6px_20px_rgba(6,28,0,0.30)] transition-all duration-300 hover:scale-105 active:scale-95"
+        href="https://wa.me/917990039450"
+        rel="noopener noreferrer"
+        target="_blank"
+        ><span class="material-symbols-outlined text-[26px]" aria-hidden="true">chat</span></a
+      >
+    </div>
+    <div
+      class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-primary-container text-surface px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.2)] flex items-center gap-space-sm border border-line-strong hidden"
+      id="basket-toast"
+      role="status"
+      aria-live="polite"
+    >
+      <span class="material-symbols-outlined text-secondary-fixed text-small">check_circle</span
+      ><span class="font-label text-label" data-toast-msg>Added to basket</span>
+    </div>
+    <div
+      id="mini-stepper-toast"
+      role="status"
+      aria-live="polite"
+      class="fixed top-20 lg:top-24 right-6 z-50 bg-[#061C00] text-[#FBF8EF] px-4 py-2 rounded-full shadow-[0_8px_24px_rgba(6,28,0,0.3)] flex items-center gap-2 border border-[#47710A]/30 transition-all duration-300 pointer-events-none opacity-0 translate-y-[-10px] hidden"
+    >
+      <span class="material-symbols-outlined text-[#F7C75D] text-[18px]">add_circle</span
+      ><span class="font-label text-xs font-semibold text-[#FBF8EF]" id="mini-stepper-toast-msg"
+        >Quantity updated (+1)</span
+      >
+    </div>
+    <div
+      class="fixed inset-0 bg-primary-container/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"
+      id="knowledge-sheet-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Product knowledge sheet"
+    >
+      <div
+        class="bg-surface max-w-2xl w-full max-h-[921px] rounded-xl border border-line shadow-xl flex flex-col overflow-hidden"
+      >
+        <div class="p-space-md border-b border-line flex items-center justify-between bg-surface-container-low">
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-secondary">description</span>
+            <span class="font-label text-label text-primary-container">Aubingo Product Knowledge Sheet (A4)</span>
+          </div>
+          <button
+            class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface"
+            onclick="closeKnowledgeModal()"
+          >
+            <span class="material-symbols-outlined text-small">close</span>
+          </button>
+        </div>
+        <div class="p-space-lg overflow-y-auto font-body text-body text-on-surface space-y-4">
+          <div class="text-center pb-4 border-b border-line">
+            <h2 class="font-h2 text-h2 text-primary-container">Salem Heirloom Turmeric Powder</h2>
+            <p class="font-label-sm text-label-sm text-secondary uppercase">
+              Aubingo @Kambafarm Technical Specifications
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-small font-small">
+            <div><strong>Botanical Name:</strong> Curcuma longa</div>
+            <div><strong>Cultivar:</strong> Salem Heirloom</div>
+            <div><strong>Curcumin Content:</strong> 4.8% - 5.2% (Lab Verified)</div>
+            <div><strong>Elevation:</strong> 640m Above Sea Level (Kambafarm)</div>
+            <div><strong>Processing:</strong> Sun-cured rhizomes, stone ground</div>
+            <div><strong>Moisture Level:</strong> &lt; 9.5%</div>
+          </div>
+          <div class="bg-pale-leaf p-3 rounded-lg text-small font-small text-ink-muted">
+            <strong>Purity Guarantee:</strong> Zero lead chromate, zero synthetic yellow color, zero added starch.
+            Sealed in amber glass jars to protect active antioxidant curcuminoids from photolysis.
+          </div>
+          <div class="flex items-center justify-between pt-2">
+            <span class="font-label-sm text-label-sm text-ink-muted">Document ID: KS-TRM-2025-V1</span>
+            <button
+              class="h-10 px-space-md rounded-full bg-secondary text-surface font-label-sm text-label-sm flex items-center gap-1"
+              onclick="alert('Downloading PDF Knowledge Sheet...'); closeKnowledgeModal();"
+            >
+              <span class="material-symbols-outlined text-[16px]">download</span> Download A4 PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
