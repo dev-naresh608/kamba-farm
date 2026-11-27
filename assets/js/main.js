@@ -44,7 +44,7 @@
     'seeds-and-saplings': 'shop.html?cat=seeds',
     'special-enquiries': 'special-enquiries.html',
     'product-turmeric': 'product-turmeric.html',
-    'recipes': 'product-knowledge-sheets.html',
+    'recipes': 'recipes.html',
     'product-knowledge-sheets': 'product-knowledge-sheets.html',
     'saturday-farm-tour': 'saturday-farm-tour.html',
     'kambafarm-weekend': 'kambafarm-weekend.html',
@@ -480,6 +480,78 @@
       empty.classList.toggle('flex', none);
     }
   };
+
+  /* Recipes — season filter and A4 recipe sheet modal ------------------ */
+  var RECIPE_ACTIVE = 'recipe-filter-btn h-9 px-space-md rounded-full bg-primary-container text-surface font-label-sm text-label-sm';
+  var RECIPE_IDLE = 'recipe-filter-btn h-9 px-space-md rounded-full bg-surface text-ink-muted hover:text-primary border border-line font-label-sm text-label-sm';
+
+  window.setRecipeFilter = function (season) {
+    $$('.recipe-filter-btn').forEach(function (btn) {
+      var active = btn.getAttribute('data-recipe-filter') === season;
+      btn.className = active ? RECIPE_ACTIVE : RECIPE_IDLE;
+      btn.setAttribute('aria-pressed', String(active));
+    });
+    var shownInGrid = 0;
+    $$('#recipes .recipe-card').forEach(function (card) {
+      var visible = season === 'all' || card.getAttribute('data-recipe-season') === season;
+      card.classList.toggle('hidden', !visible);
+      if (visible && !card.classList.contains('recipe-featured')) shownInGrid++;
+    });
+    var featured = $('#recipes .recipe-featured');
+    var featuredShown = featured && !featured.classList.contains('hidden');
+    var grid = $('#recipes-grid');
+    var empty = $('#recipes-empty');
+    if (grid) grid.classList.toggle('hidden', shownInGrid === 0);
+    if (empty) {
+      var none = shownInGrid === 0 && !featuredShown;
+      empty.classList.toggle('hidden', !none);
+      empty.classList.toggle('flex', none);
+    }
+  };
+
+  var recipeOpener = null;
+  window.openRecipeSheet = function (id) {
+    var modal = $('#recipe-sheet-modal');
+    var tpl = document.getElementById('recipe-' + id);
+    var body = $('#recipe-sheet-body');
+    if (!modal || !tpl || !body) return;
+    body.innerHTML = '';
+    body.appendChild(tpl.content.cloneNode(true));
+    body.scrollTop = 0;
+    recipeOpener = document.activeElement;
+    modal.classList.remove('hidden');
+    document.documentElement.classList.add('overflow-hidden');
+    var close = modal.querySelector('[data-recipe-close]');
+    if (close) close.focus();
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+  };
+
+  window.closeRecipeSheet = function () {
+    var modal = $('#recipe-sheet-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    modal.classList.add('hidden');
+    document.documentElement.classList.remove('overflow-hidden');
+    if (history.replaceState) history.replaceState(null, '', window.location.pathname + window.location.search);
+    if (recipeOpener && recipeOpener.focus) recipeOpener.focus();
+  };
+
+  function initRecipes() {
+    var modal = $('#recipe-sheet-modal');
+    if (!modal) return;
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) window.closeRecipeSheet();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') window.closeRecipeSheet();
+    });
+    // recipes.html#turmeric-milk opens that sheet directly
+    function openFromHash() {
+      var id = window.location.hash.slice(1);
+      if (id && document.getElementById('recipe-' + id)) window.openRecipeSheet(id);
+    }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  }
 
   /* Knowledge sheet modal --------------------------------------------- */
   window.openKnowledgeModal = function () {
@@ -1281,6 +1353,7 @@
     initShop();
     initProduct();
     initModal();
+    initRecipes();
     initNewsletter();
     window.recalcTourTotal();
     renderBasketEverywhere();

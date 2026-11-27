@@ -83,7 +83,8 @@
     'our-animals.html': 'discover', 'how-we-farm.html': 'discover',
     'shop.html': 'shop', 'product-turmeric.html': 'shop', 'special-enquiries.html': 'shop',
     'saturday-farm-tour.html': 'visit', 'kambafarm-weekend.html': 'visit', 'practical-information.html': 'visit',
-    'product-knowledge-sheets.html': 'news', 'farm-stories.html': 'news'
+    'product-knowledge-sheets.html': 'news', 'farm-stories.html': 'news',
+    'recipes.html': 'news'
   };
   var file = window.location.pathname.split('/').pop() || 'index.html';
   if (file.indexOf('story-') === 0) SECTION[file] = 'news'; // single blog posts

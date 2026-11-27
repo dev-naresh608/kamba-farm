@@ -31,6 +31,7 @@ then open http://localhost:5511
 | `our-story.html`, `the-farm.html`, `our-team.html`, `our-animals.html`, `how-we-farm.html` | Discover pages |
 | `product-knowledge-sheets.html` | Product knowledge sheets (A4 sheet modal) |
 | `farm-stories.html`, `story-*.html` | Farm stories blog (topic filter) and 6 story pages |
+| `recipes.html` | Recipes: season filter, each recipe opens an A4 recipe sheet (`recipes.html#turmeric-milk` opens one directly). The 6 recipes are samples until the farm kitchen's own A4 recipe sheets arrive |
 | `login.html` | Demo log in / sign up (`#signup` opens the sign-up tab, `?next=basket.html` returns there after login) |
 | `profile.html` | Visitor profile: contact, delivery address, preferences, log out (needs login) |
 

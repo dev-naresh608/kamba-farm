@@ -211,6 +211,11 @@
                 >
                 <a
                   class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                  href="recipes.html"
+                  >Recipes</a
+                >
+                <a
+                  class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
                   href="product-knowledge-sheets.html"
                   >Product knowledge sheets</a
                 >
@@ -453,6 +458,11 @@
               >
               <a
                 class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
+                href="recipes.html"
+                >Recipes</a
+              >
+              <a
+                class="font-small text-small text-on-surface hover:bg-pale-leaf hover:text-leaf-dark px-space-md py-space-sm rounded transition-colors"
                 href="product-knowledge-sheets.html"
                 >Product knowledge sheets</a
               >
@@ -630,6 +640,7 @@
           "practical-information.html": "visit",
           "product-knowledge-sheets.html": "news",
           "farm-stories.html": "news",
+          "recipes.html": "news",
         };
         var file = window.location.pathname.split("/").pop() || "index.html";
         if (file.indexOf("story-") === 0) SECTION[file] = "news"; // single blog posts
@@ -1019,7 +1030,7 @@
                 <a href="farm-stories.html" class="hover:text-surface transition-colors">Farm stories</a>
               </li>
               <li>
-                <a href="product-knowledge-sheets.html" class="hover:text-surface transition-colors">Kitchen recipes</a>
+                <a href="recipes.html" class="hover:text-surface transition-colors">Kitchen recipes</a>
               </li>
             </ul>
           </div>
