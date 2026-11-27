@@ -37,9 +37,9 @@ then open http://localhost:5511
 **Demo login:** accounts, the login session and the profile are stored in the browser
 (`localStorage`), passwords are hashed — fine for the mockup, but the live site needs a real
 login (e.g. the shop platform's customer accounts). "Pay Online" asks for login; "Send Order on
-WhatsApp" does not, and opens a chat with the full order summary. The WhatsApp number is set to
-the **test number 917990039450** (`WHATSAPP_NUMBER` in `assets/js/main.js` and the `wa.me` links in the
-pages) — replace it with the farm's number before launch.
+WhatsApp" does not, and opens a chat with the full order summary. The WhatsApp / phone number is
+**+91 88066 60845** (`WHATSAPP_NUMBER` in `assets/js/main.js`, the `wa.me/918806660845` links and the
+number shown in the footer and on Practical information).
 
 ## Files
 
@@ -106,5 +106,5 @@ npx tailwindcss@3.4.17 -c tailwind.config.js -i assets/css/src/tailwind.input.cs
 
 - Images are still loaded from Stitch's Google CDN links (`lh3.googleusercontent.com`).
   Download them into `assets/img/` before going live, as those links can expire.
-- WhatsApp links use the placeholder `https://wa.me/` and `+91 98230 00000` from the
+- WhatsApp links use the placeholder `https://wa.me/` and `+91 88066 60845` from the
   design — replace with the real number (`WHATSAPP_NUMBER` in `assets/js/main.js` too).

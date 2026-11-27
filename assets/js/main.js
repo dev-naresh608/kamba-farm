@@ -130,7 +130,7 @@
   var MIN_ORDER = 500;
   var FREE_DELIVERY_FROM = 1200;
   var DELIVERY_FEE = 100;
-  var WHATSAPP_NUMBER = '917990039450'; // testing number — replace with the farm's WhatsApp before launch
+  var WHATSAPP_NUMBER = '918806660845'; // farm WhatsApp: +91 88066 60845
 
   var PRODUCT_IMAGES = {
     'Artisanal Turmeric Powder': 'https://lh3.googleusercontent.com/aida-public/AB6AXuArTOWGvSYzWe5nCxT2iY1XUnz51wSI388mSzDXXsJOFFAVD7UwZR_tgnOY1KpO2YIBUZAU1WTof7PicgrwceBSXZfwDnePatTRMCnPjPFlsT01lAUNOOv5_6lD1pnDGJH8VK8F2ZaDrgSvoR1u2dHQMGfyVrCPjXPLZTt8Jr6NsVCGe5Hn5N6AvUvWqVL3BpqPN9uRASGJ6Ol5ECpR4-FsRv3H_AYh2TDIP-c--kW1',
